@@ -42,14 +42,14 @@ const ImgBox = styled(Box)(({ theme }) => ({
 
 const Img = styled("img")(({ theme }) => ({
   width: "100%",
-  height: "22rem",
+  height: "25rem",
   transition: "all 1s",
   borderRadius: "20px",
 
   [theme.breakpoints.down("md")]: { width: "100%", height: "15rem" },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    height: "10rem",
+    height: "20rem",
     borderRadius: "10px",
   },
 
@@ -63,7 +63,7 @@ const TitleBox = styled(Box)(({ theme }) => ({
   height: "13rem",
   [theme.breakpoints.down("lg")]: { height: "12rem" },
   [theme.breakpoints.down("md")]: { height: "10rem", padding: "0.7rem" },
-  [theme.breakpoints.down("sm")]: { height: "8.5rem", padding: "0.4rem" },
+  [theme.breakpoints.down("sm")]: { height: "6rem", padding: "0.4rem" },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({

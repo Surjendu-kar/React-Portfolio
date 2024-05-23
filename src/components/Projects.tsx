@@ -45,6 +45,7 @@ const MainProjects = styled(Box)(({ theme }) => ({
 const MainProjectBox = styled(Box)(({ theme }) => ({
   width: "45%",
   [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: { width: "90%" },
 }));
 
 const SmallProjects = styled(Box)(({ theme }) => ({
@@ -58,7 +59,7 @@ const SmallProjects = styled(Box)(({ theme }) => ({
 const SmallProjectBox = styled(Box)(({ theme }) => ({
   width: "25%",
   [theme.breakpoints.down("md")]: { width: "35%" },
-  [theme.breakpoints.down("sm")]: { width: "37%" },
+  [theme.breakpoints.down("sm")]: { width: "60%" },
 }));
 
 const Projects = () => {

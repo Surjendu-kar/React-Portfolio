@@ -49,7 +49,7 @@ const Img = styled("img")(({ theme }) => ({
   [theme.breakpoints.down("md")]: { width: "100%", height: "15rem" },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
-    height: "8rem",
+    height: "12rem",
     borderRadius: "10px",
   },
 
@@ -60,10 +60,10 @@ const Img = styled("img")(({ theme }) => ({
 
 const TitleBox = styled(Box)(({ theme }) => ({
   padding: "1rem",
-  height: "12rem",
+  minHeight: "15rem",
   [theme.breakpoints.down("lg")]: { height: "12rem" },
-  [theme.breakpoints.down("md")]: { height: "11rem", padding: "0.7rem" },
-  [theme.breakpoints.down("sm")]: { height: "11rem", padding: "0.7rem" },
+  [theme.breakpoints.down("md")]: { minHeight: "11rem", padding: "0.7rem" },
+  [theme.breakpoints.down("sm")]: { height: "7rem", padding: "0.7rem" },
 }));
 
 const Heading = styled(Typography)(({ theme }) => ({
@@ -75,8 +75,8 @@ const Heading = styled(Typography)(({ theme }) => ({
 const TextTitle = styled(Typography)(({ theme }) => ({
   fontSize: "0.9rem",
   [theme.breakpoints.down("lg")]: { fontSize: "0.75rem" },
-  [theme.breakpoints.down("md")]: { fontSize: "0.6rem" },
-  [theme.breakpoints.down("sm")]: { fontSize: "0.53rem" },
+  [theme.breakpoints.down("md")]: { fontSize: "0.62rem" },
+  [theme.breakpoints.down("sm")]: { fontSize: "0.6rem" },
 }));
 
 function MainCard({ projectName, projectTitle, mainImg, link }: CardProps) {
