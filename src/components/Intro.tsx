@@ -1,4 +1,4 @@
-import { Button, Typography, styled } from "@mui/material";
+import { Box, Button, Typography, styled } from "@mui/material";
 import "./stars.scss";
 import Typed from "react-typed";
 
@@ -22,6 +22,7 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
   textTransform: "none",
   fontSize: "1rem",
   marginTop: "1rem",
+  width: "fit-content",
   "&:hover": {
     color: "#1976d2",
     backgroundColor: "#fff",
@@ -33,7 +34,7 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
     padding: "0.4rem 0.8rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "0.5rem",
+    fontSize: "0.55rem",
     marginTop: "0.5rem",
     padding: "0.3rem 0.7rem",
   },
@@ -62,9 +63,25 @@ const Intro = () => {
                   />
                 </strong>
               </TextTitle>
-              <ButtonStyle variant="contained" href="#project">
-                View My Projects
-              </ButtonStyle>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                <ButtonStyle
+                  variant="contained"
+                  href="https://drive.google.com/file/d/1n3xTuqvPRjJ79vbe5lqYZF4w4ymr0Ekl/view?usp=drivesdk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View My Resume
+                </ButtonStyle>
+                <ButtonStyle variant="contained" href="#project">
+                  Projects
+                </ButtonStyle>
+              </Box>
             </div>
           </div>
         </div>
