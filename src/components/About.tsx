@@ -5,18 +5,20 @@ const About = () => {
   const skills = [
     { id: "ReactJS_skill", content: "ReactJS", porcentage: "70%", value: "70" },
     { id: "TypeScript", content: "TypeScript", porcentage: "60%", value: "60" },
-
-    { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
-    { id: "CSS3_skill", content: "CSS", porcentage: "75%", value: "75" },
     {
       id: "JavaScript_skill",
       content: "JavaScript",
       porcentage: "80%",
       value: "80",
     },
-    { id: "Python_skill", content: "Python", porcentage: "80%", value: "80" },
-    { id: "JAVA", content: "JAVA", porcentage: "75%", value: "75" },
-    { id: "C", content: "C", porcentage: "80%", value: "80" },
+    { id: "MUI", content: "MUI", porcentage: "75%", value: "75" },
+    { id: "Tailwind CSS", content: "Tailwind CSS", porcentage: "75%", value: "75" },
+
+    { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
+    { id: "CSS3_skill", content: "CSS", porcentage: "75%", value: "75" },
+    { id: "Supabase", content: "Supabase", porcentage: "60%", value: "80" },
+
+    { id: "Firebase", content: "Firebase", porcentage: "50%", value: "80" },
   ];
 
   const about_me = [
@@ -52,7 +54,7 @@ const About = () => {
                       <h5 className="title-left">About Me</h5>
                     </div>
                     {about_me.map((content) => (
-                      <p style={{fontSize:'1.05rem'}} key={content.id}>
+                      <p style={{ fontSize: "1.05rem" }} key={content.id}>
                         {content.content}
                       </p>
                     ))}
@@ -61,7 +63,7 @@ const About = () => {
 
                 <div className="col-md-6">
                   {/* Skills Section */}
-                  <div className="skill-mf" style={{paddingTop:'2.5rem'}}>
+                  <div className="skill-mf" style={{ paddingTop: "2.5rem" }}>
                     {skills.map((skill) => (
                       <React.Fragment key={skill.id}>
                         <span>{skill.content}</span>{" "}
