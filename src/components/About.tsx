@@ -1,5 +1,5 @@
 import React from "react";
-import myImage from "../assets/myImg.png";
+import myImage from "../assets/myImg.jpg";
 
 const About = () => {
   const skills = [
@@ -12,7 +12,12 @@ const About = () => {
       value: "80",
     },
     { id: "MUI", content: "MUI", porcentage: "75%", value: "75" },
-    { id: "Tailwind CSS", content: "Tailwind CSS", porcentage: "75%", value: "75" },
+    {
+      id: "Tailwind CSS",
+      content: "Tailwind CSS",
+      porcentage: "75%",
+      value: "75",
+    },
 
     { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
     { id: "CSS3_skill", content: "CSS", porcentage: "75%", value: "75" },
@@ -41,9 +46,17 @@ const About = () => {
                     <div style={{ margin: "0 auto" }}>
                       <div className="about-img">
                         <img
-                          className="img-fluid rounded b-shadow-a"
+                          className="img-fluid b-shadow-a"
                           src={myImage}
                           alt=""
+                          style={{
+                            width: "70%",
+                            maxWidth: "300px",
+                            height: "auto",
+                            borderRadius: "50%",
+                            margin: "0 auto",
+                            display: "block",
+                          }}
                         />
                       </div>
                     </div>
