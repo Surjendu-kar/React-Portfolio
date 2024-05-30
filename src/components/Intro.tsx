@@ -73,7 +73,7 @@ const Intro = () => {
                 <ButtonStyle
                   variant="contained"
                   href="https://drive.google.com/file/d/1n3xTuqvPRjJ79vbe5lqYZF4w4ymr0Ekl/view?usp=drivesdk"
-                  target="_blank"
+                  // target="_blank"
                   rel="noopener noreferrer"
                 >
                   View My Resume
