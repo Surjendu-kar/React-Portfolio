@@ -55,7 +55,7 @@ const Intro = () => {
                 <span className="text-slider-items"></span>
                 <strong className="text-slider">
                   <Typed
-                    strings={["Front End Developer", "Software Engineer"]}
+                    strings={["Front End Developer", "Software Engineer","Let's Connect!"]}
                     typeSpeed={80}
                     backDelay={1100}
                     backSpeed={30}
