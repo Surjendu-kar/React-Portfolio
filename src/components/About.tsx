@@ -1,106 +1,91 @@
 import React from "react";
-import myImage from "../assets/myImg.jpg";
+import myImage from "../assets/mynewImg.png";
+import Skills from "./Skills"; // Adjust the import path as necessary
+import { Box, styled, Typography } from "@mui/material";
+
+const Heading = styled(Typography)(({ theme }) => ({
+  fontSize: "2.7rem",
+  fontWeight: "bold",
+  textTransform: "uppercase",
+  color: "#ffffff", // Changed text color to white for better contrast
+  [theme.breakpoints.down("md")]: { fontSize: "2rem" },
+  [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
+}));
+
+const HrLine = styled(Box)(({ theme }) => ({
+  width: "40px",
+  height: "5px",
+  backgroundColor: "#ffffff", // Changed line color to white for better contrast
+  margin: "0 auto",
+  marginBottom: "1rem",
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {},
+}));
+
+const about_me = [
+  {
+    id: "first-p-about",
+    content:
+      "Aspiring Frontend Developer with expertise in ReactJS and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
+  },
+  {
+    id: "second-p-about",
+    content:
+      "During my internship at Qubited, I contributed significantly to the development of a world tour freelancer project, enhancing user experience and interface design. I also have experience in integrating Firebase authentication and real-time database functionalities.",
+  },
+  {
+    id: "third-p-about",
+    content:
+      "I have developed multiple personal projects, including HealthHarbor, a healthcare platform; MovieMagnet, a dynamic movie web application; and SkySight, a comprehensive weather application. My academic background in Computer Application from Dr. B.C Roy Engineering College, coupled with my industrial training, has equipped me with a solid foundation in frontend development.",
+  },
+  {
+    id: "fourth-p-about",
+    content:
+      "Currently, I am expanding my skill set by learning Next.js and MongoDB to further enhance my capabilities as a frontend developer.",
+  },
+];
 
 const About = () => {
-  const skills = [
-    { id: "ReactJS_skill", content: "ReactJS", porcentage: "70%", value: "70" },
-    { id: "TypeScript", content: "TypeScript", porcentage: "60%", value: "60" },
-    {
-      id: "JavaScript_skill",
-      content: "JavaScript",
-      porcentage: "80%",
-      value: "80",
-    },
-    { id: "MUI", content: "MUI", porcentage: "75%", value: "75" },
-    {
-      id: "Tailwind CSS",
-      content: "Tailwind CSS",
-      porcentage: "75%",
-      value: "75",
-    },
-
-    { id: "HTML5_skill", content: "HTML5", porcentage: "80%", value: "80" },
-    { id: "CSS3_skill", content: "CSS", porcentage: "75%", value: "75" },
-    { id: "Supabase", content: "Supabase", porcentage: "60%", value: "80" },
-
-    { id: "Firebase", content: "Firebase", porcentage: "50%", value: "80" },
-  ];
-
-  const about_me = [
-    {
-      id: "first-p-about",
-      content:
-        "A BCA student who wants to secure a challenging position in a reputed organization where l can utilize my technical skills to contribute to the growth of the company and also enhance my own knowledge and skills.",
-    },
-  ];
-
   return (
-    <section id="about" className="about-mf sect-pt4 route">
-      <div className="container">
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="box-shadow-full" style={{ borderRadius: "20px" }}>
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="row">
-                    <div style={{ margin: "0 auto" }}>
-                      <div className="about-img">
-                        <img
-                          className="img-fluid b-shadow-a"
-                          src={myImage}
-                          alt=""
-                          style={{
-                            width: "70%",
-                            maxWidth: "300px",
-                            height: "auto",
-                            borderRadius: "50%",
-                            margin: "0 auto",
-                            display: "block",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
+    <Box
+      component="section"
+      id="about"
+      sx={{
+        pt: "5rem",
+        pb: 12,
+        backgroundColor: "#0d1224",
+        color: "white",
+        textAlign: "center",
+      }}
+    >
+      <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>
+        <Box>
+          <img
+            src={myImage}
+            alt=""
+            style={{
+              width: "70%",
+              maxWidth: "300px",
+              height: "auto",
+              borderRadius: "10%",
+              margin: "0 auto",
+              display: "block",
+            }}
+          />
+        </Box>
+        <Box mt={4}>
+          <Heading> About Me</Heading>
+          <HrLine />
 
-                  <div className="about-me pt-4 pt-md-0">
-                    <div className="title-box-2">
-                      <h5 className="title-left">About Me</h5>
-                    </div>
-                    {about_me.map((content) => (
-                      <p style={{ fontSize: "1.05rem" }} key={content.id}>
-                        {content.content}
-                      </p>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="col-md-6">
-                  {/* Skills Section */}
-                  <div className="skill-mf" style={{ paddingTop: "2.5rem" }}>
-                    {skills.map((skill) => (
-                      <React.Fragment key={skill.id}>
-                        <span>{skill.content}</span>{" "}
-                        <span className="pull-right">{skill.porcentage}</span>
-                        <div className="progress">
-                          <div
-                            className="progress-bar"
-                            role="progressbar"
-                            style={{ width: skill.porcentage }}
-                            aria-valuenow={parseInt(skill.value, 10)}
-                            aria-valuemin={0}
-                            aria-valuemax={100}
-                          ></div>
-                        </div>
-                      </React.Fragment>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+          {about_me.map((content) => (
+            <Typography key={content.id} sx={{ fontSize: "1.1rem", mb: 2 }}>
+              {content.content}
+            </Typography>
+          ))}
+        </Box>
+      </Box>
+      <Skills />
+    </Box>
   );
 };
 

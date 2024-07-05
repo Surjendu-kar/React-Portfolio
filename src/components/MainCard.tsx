@@ -8,19 +8,21 @@ interface CardProps {
 }
 
 const MainBox = styled(Box)(({ theme }) => ({
-  marginBottom: "3rem",
+  marginBottom: "1rem",
   WebkitBackfaceVisibility: "hidden",
   backfaceVisibility: "hidden",
-  backgroundColor: "#fff",
-  borderRadius: "20px",
-  boxShadow: "0 13px 8px -10px rgba(0, 0, 0, 0.1)",
+  backgroundColor: "#11152c",
+  borderRadius: "10px",
+  // boxShadow: "0 0 15px rgba(255, 255, 255, 0.3)", // Added white shadow for 3D effect
   overflow: "hidden",
-  transition: "all 0.3s ease",
-
+  transition: "transform 0.3s",
+  color: "white",
+  height: "100%",
+  // padding: "1rem 2rem",
   "&:hover": {
-    boxShadow: "0 13px 8px -10px rgba(0, 0, 0, 0.3)",
+    transform: "scale(1.05)",
+    boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)", // Enhanced shadow on hover
   },
-
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
     marginBottom: "1rem",
@@ -60,7 +62,7 @@ const Img = styled("img")(({ theme }) => ({
 
 const TitleBox = styled(Box)(({ theme }) => ({
   padding: "1rem",
-  minHeight: "15rem",
+  minHeight: "13rem",
   [theme.breakpoints.down("lg")]: { height: "12rem" },
   [theme.breakpoints.down("md")]: { minHeight: "11rem", padding: "0.7rem" },
   [theme.breakpoints.down("sm")]: { height: "7rem", padding: "0.7rem" },

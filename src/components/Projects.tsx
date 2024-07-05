@@ -20,15 +20,15 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#484848",
+  color: "#ffffff", // Changed text color to white for better contrast
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
 
 const HrLine = styled(Box)(({ theme }) => ({
   width: "40px",
-  height: " 5px",
-  backgroundColor: "#484848",
+  height: "5px",
+  backgroundColor: "#ffffff", // Changed line color to white for better contrast
   margin: "0 auto",
   [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
@@ -42,6 +42,7 @@ const MainProjects = styled(Box)(({ theme }) => ({
   flexWrap: "wrap",
   [theme.breakpoints.down("md")]: { gap: theme.spacing(2) },
 }));
+
 const MainProjectBox = styled(Box)(({ theme }) => ({
   width: "45%",
   [theme.breakpoints.down("md")]: {},
@@ -66,7 +67,13 @@ const Projects = () => {
   return (
     <Box
       id="project"
-      sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#0d1224", // Same background color as the other sections
+        py: 12, // Adding padding for top and bottom
+      }}
     >
       <Container>
         <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
@@ -74,18 +81,11 @@ const Projects = () => {
           <HrLine />
         </Box>
 
-        {/* Rest of the portfolio items */}
         <MainProjects>
-          {/* Portfolio item */}
           <MainProjectBox>
             <MainCard
-              projectName={"HealthHarbor "}
-              projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and
-Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required
-to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege
-of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide
-feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and
-reliable payment transactions`}
+              projectName={"HealthHarbor"}
+              projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
               mainImg={HealthHarbor_Img}
               link={"https://health-harbor-beta.vercel.app"}
             />
@@ -105,11 +105,7 @@ reliable payment transactions`}
           <MainProjectBox>
             <MainCard
               projectName={"SkySight"}
-              projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time
-            weather for their location, access 3-6 day forecasts,
-            view detailed humidity and temperature graphs,
-            seamlessly switch between favorite locations, and
-            explore conditions via an interactive map.`}
+              projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
               mainImg={SkySight_Img}
               link={"https://skysight-v2.vercel.app/"}
             />
@@ -118,7 +114,7 @@ reliable payment transactions`}
           <MainProjectBox>
             <MainCard
               projectName={"Tenzies"}
-              projectTitle={` Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
+              projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
               mainImg={Tenzies_Img}
               link={"https://tenzies-game-eight-alpha.vercel.app/"}
             />

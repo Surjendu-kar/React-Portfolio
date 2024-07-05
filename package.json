@@ -22,6 +22,7 @@
     "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fast-marquee": "^1.6.5",
     "react-router-dom": "^6.21.1",
     "react-typed": "^1.2.0"
   },
