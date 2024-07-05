@@ -28,6 +28,9 @@ import mysqlSvg from "../assets/skills/mysql.svg";
 import postgresqlSvg from "../assets/skills/postgresql.svg";
 import pythonSvg from "../assets/skills/python.svg";
 import vitejsSvg from "../assets/skills/vitejs.svg";
+import supabase from "../assets/skills/supabase.svg";
+import chakra from "../assets/skills/chakra.svg";
+
 import "./glow.css"; // Ensure you import the glow styles
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -47,46 +50,50 @@ const HrLine = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
 }));
 const skillsData = [
-  "ReactJS",
   "NextJS",
+  "ReactJS",
   "TypeScript",
   "JavaScript",
   "MUI",
+  "Chakra",
   "Tailwind CSS",
-  "HTML5",
-  "CSS",
-  "Firebase",
   "Bootstrap",
-  "C",
-  "Git",
-  "Java",
   "MongoDB",
   "MySQL",
   "PostgreSQL",
+  "Firebase",
+  "Supabase",
+  "HTML5",
+  "CSS",
+  "C",
+  "Java",
   "Python",
-  "ViteJS",
+  "Vite",
+  "Git",
 ];
 
 const skillsImage = (skill) => {
   const images = {
+    NextJS: nextjsSvg,
     ReactJS: reactSvg,
-    NextJS: nextjsSvg, // Fixed the key
     TypeScript: typescriptSvg,
     JavaScript: javascriptSvg,
     MUI: muiSvg,
     "Tailwind CSS": tailwindSvg,
-    HTML5: htmlSvg,
-    CSS: cssSvg,
-    Firebase: firebaseSvg,
+    Chakra: chakra,
     Bootstrap: bootstrapSvg,
-    C: cSvg,
-    Git: gitSvg,
-    Java: javaSvg,
     MongoDB: mongoDBSvg,
     MySQL: mysqlSvg,
     PostgreSQL: postgresqlSvg,
+    Firebase: firebaseSvg,
+    Supabase: supabase,
+    HTML5: htmlSvg,
+    CSS: cssSvg,
+    C: cSvg,
+    Java: javaSvg,
     Python: pythonSvg,
-    ViteJS: vitejsSvg,
+    Git: gitSvg,
+    Vite: vitejsSvg,
   };
 
   return images[skill];
