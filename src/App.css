@@ -1,0 +1,42 @@
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in-left {
+    opacity: 0;
+    animation: slideInFromLeft 2s forwards;
+  }
+  
+  .slide-in-right {
+    opacity: 0;
+    animation: slideInFromRight 2s forwards;
+  }
+
+  .blur-in {
+    filter: blur(5px);
+    transition: filter 2s;
+  }
+  
+  .blur-in.show {
+    filter: blur(0);
+  }
+  
+  

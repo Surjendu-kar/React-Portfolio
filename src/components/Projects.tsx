@@ -12,6 +12,8 @@ import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
 import Gemini from "../assets/gemini.png";
 import NextLevelFood from "../assets/nextLevelFood.png";
+import AnimatedCard from "./AnimatedCard";
+import BlurCard from "./BlurCard";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -85,59 +87,71 @@ const Projects = () => {
 
         <MainProjects>
           <MainProjectBox>
-            <MainCard
-              projectName={"Gemini-Clone"}
-              projectTitle={`Currently in development phase.`}
-              mainImg={Gemini}
-              link={"https://itsmy-gemini-clone.vercel.app/"}
-            />
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"Gemini-Clone"}
+                projectTitle={`Currently in development phase.`}
+                mainImg={Gemini}
+                link={"https://itsmy-gemini-clone.vercel.app/"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
 
           <MainProjectBox>
-            <MainCard
-              projectName={"NextLevel Food"}
-              projectTitle="NextLevel Food For NextLevel Foodies using NextJS [currently in development phase]"
-              mainImg={NextLevelFood}
-              link={"https://foodies-food.vercel.app/"}
-            />
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"NextLevel Food"}
+                projectTitle="NextLevel Food For NextLevel Foodies using NextJS [currently in development phase]"
+                mainImg={NextLevelFood}
+                link={"https://foodies-food.vercel.app/"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
 
           <MainProjectBox>
-            <MainCard
-              projectName={"HealthHarbor"}
-              projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
-              mainImg={HealthHarbor_Img}
-              link={"https://health-harbor-beta.vercel.app"}
-            />
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"HealthHarbor"}
+                projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
+                mainImg={HealthHarbor_Img}
+                link={"https://health-harbor-beta.vercel.app"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
 
           <MainProjectBox>
-            <MainCard
-              projectName={"Movie Magnet"}
-              projectTitle={
-                "Developed a dynamic React-JS web application for movie enthusiasts, offering real-time access to trending, popular, and top-rated movies and TV shows. The application features comprehensive search functionality for users to easily find their favorite content. Advanced filtering options are integrated to allow customization of the viewing experience."
-              }
-              mainImg={MovieMagnet_Img}
-              link={"https://movie-magnet-one.vercel.app/"}
-            />
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Movie Magnet"}
+                projectTitle={
+                  "Developed a dynamic React-JS web application for movie enthusiasts, offering real-time access to trending, popular, and top-rated movies and TV shows. The application features comprehensive search functionality for users to easily find their favorite content. Advanced filtering options are integrated to allow customization of the viewing experience."
+                }
+                mainImg={MovieMagnet_Img}
+                link={"https://movie-magnet-one.vercel.app/"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
 
           <MainProjectBox>
-            <MainCard
-              projectName={"SkySight"}
-              projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
-              mainImg={SkySight_Img}
-              link={"https://skysight-v2.vercel.app/"}
-            />
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"SkySight"}
+                projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
+                mainImg={SkySight_Img}
+                link={"https://skysight-v2.vercel.app/"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
 
           <MainProjectBox>
-            <MainCard
-              projectName={"Tenzies"}
-              projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
-              mainImg={Tenzies_Img}
-              link={"https://tenzies-game-eight-alpha.vercel.app/"}
-            />
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Tenzies"}
+                projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
+                mainImg={Tenzies_Img}
+                link={"https://tenzies-game-eight-alpha.vercel.app/"}
+              />
+            </AnimatedCard>
           </MainProjectBox>
         </MainProjects>
 
@@ -148,29 +162,35 @@ const Projects = () => {
 
         <SmallProjects>
           <SmallProjectBox>
-            <SmallCard
-              projectName={"AstroNest"}
-              projectTitle={`Developed a React and TypeScript web app that allows users to retrieve astronaut details either by entering an astronaut ID or by clicking a 'Random Astronaut' button for random astronaut information.`}
-              mainImg={AstroNest_Img}
-              link={"https://myastro-nest.vercel.app/"}
-            />
+            <AnimatedCard direction="left">
+              <SmallCard
+                projectName={"AstroNest"}
+                projectTitle={`Developed a React and TypeScript web app that allows users to retrieve astronaut details either by entering an astronaut ID or by clicking a 'Random Astronaut' button for random astronaut information.`}
+                mainImg={AstroNest_Img}
+                link={"https://myastro-nest.vercel.app/"}
+              />
+            </AnimatedCard>
           </SmallProjectBox>
 
           <SmallProjectBox>
-            <SmallCard
-              projectName={"FlagNForecast"}
-              projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
-              mainImg={FlagNForecast_Img}
-              link={"https://flag-and-forecast.vercel.app/"}
-            />
+            <BlurCard>
+              <SmallCard
+                projectName={"FlagNForecast"}
+                projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
+                mainImg={FlagNForecast_Img}
+                link={"https://flag-and-forecast.vercel.app/"}
+              />
+            </BlurCard>
           </SmallProjectBox>
           <SmallProjectBox>
-            <SmallCard
-              projectName={"Instantech"}
-              projectTitle={`Developed a React and TypeScript web application implementing infinite scrolling, where new documents are dynamically loaded both as the user scrolls and at 3-second intervals.`}
-              mainImg={Instantech_Img}
-              link={"https://instantech-orcin.vercel.app/"}
-            />
+            <AnimatedCard direction="right">
+              <SmallCard
+                projectName={"Instantech"}
+                projectTitle={`Developed a React and TypeScript web application implementing infinite scrolling, where new documents are dynamically loaded both as the user scrolls and at 3-second intervals.`}
+                mainImg={Instantech_Img}
+                link={"https://instantech-orcin.vercel.app/"}
+              />
+            </AnimatedCard>
           </SmallProjectBox>
         </SmallProjects>
       </Container>

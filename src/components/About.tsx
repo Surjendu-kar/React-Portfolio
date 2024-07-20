@@ -2,6 +2,8 @@ import React from "react";
 import myImage from "../assets/mynewImg.png";
 import Skills from "./Skills"; // Adjust the import path as necessary
 import { Box, styled, Typography } from "@mui/material";
+import AnimatedCard from "./AnimatedCard";
+import BlurCard from "./BlurCard";
 
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -59,30 +61,34 @@ const About = () => {
       }}
     >
       <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>
-        <Box>
-          <img
-            src={myImage}
-            alt=""
-            style={{
-              width: "70%",
-              maxWidth: "300px",
-              height: "auto",
-              borderRadius: "10%",
-              margin: "0 auto",
-              display: "block",
-            }}
-          />
-        </Box>
-        <Box mt={4}>
-          <Heading> About Me</Heading>
-          <HrLine />
+        <BlurCard>
+          <Box>
+            <img
+              src={myImage}
+              alt=""
+              style={{
+                width: "70%",
+                maxWidth: "300px",
+                height: "auto",
+                borderRadius: "10%",
+                margin: "0 auto",
+                display: "block",
+              }}
+            />
+          </Box>
+        </BlurCard>
+        <AnimatedCard direction="left">
+          <Box mt={4}>
+            <Heading> About Me</Heading>
+            <HrLine />
 
-          {about_me.map((content) => (
-            <Typography key={content.id} sx={{ fontSize: "1.1rem", mb: 2 }}>
-              {content.content}
-            </Typography>
-          ))}
-        </Box>
+            {about_me.map((content) => (
+              <Typography key={content.id} sx={{ fontSize: "1.1rem", mb: 2 }}>
+                {content.content}
+              </Typography>
+            ))}
+          </Box>
+        </AnimatedCard>
       </Box>
       <Skills />
     </Box>
