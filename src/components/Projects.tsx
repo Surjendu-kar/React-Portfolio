@@ -10,6 +10,8 @@ import { Box, Typography } from "@mui/material";
 import MainCard from "./MainCard";
 import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
+import Gemini from "../assets/gemini.png";
+import NextLevelFood from "../assets/nextLevelFood.png";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -84,6 +86,24 @@ const Projects = () => {
         <MainProjects>
           <MainProjectBox>
             <MainCard
+              projectName={"Gemini-Clone"}
+              projectTitle={`Currently in development phase.`}
+              mainImg={Gemini}
+              link={"https://itsmy-gemini-clone.vercel.app/"}
+            />
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <MainCard
+              projectName={"NextLevel Food"}
+              projectTitle="NextLevel Food For NextLevel Foodies using NextJS [currently in development phase]"
+              mainImg={NextLevelFood}
+              link={"https://foodies-food.vercel.app/"}
+            />
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <MainCard
               projectName={"HealthHarbor"}
               projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
               mainImg={HealthHarbor_Img}
@@ -122,7 +142,7 @@ const Projects = () => {
         </MainProjects>
 
         <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-          <Heading>Small Projects</Heading>
+          <Heading>Others</Heading>
           <HrLine />
         </Box>
 
