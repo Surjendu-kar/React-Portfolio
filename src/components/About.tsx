@@ -1,6 +1,6 @@
 import React from "react";
 import myImage from "../assets/mynewImg.png";
-import Skills from "./Skills"; // Adjust the import path as necessary
+import Skills from "./Skills";
 import { Box, styled, Typography } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
@@ -9,7 +9,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff", // Changed text color to white for better contrast
+  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -17,7 +17,7 @@ const Heading = styled(Typography)(({ theme }) => ({
 const HrLine = styled(Box)(({ theme }) => ({
   width: "40px",
   height: "5px",
-  backgroundColor: "#ffffff", // Changed line color to white for better contrast
+  backgroundColor: "#ffffff",
   margin: "0 auto",
   marginBottom: "1rem",
   [theme.breakpoints.down("md")]: {},
