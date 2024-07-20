@@ -10,20 +10,20 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontWeight: "600",
   fontFamily: "var(--bs-body-font-family)",
   [theme.breakpoints.down("lg")]: { fontSize: "4rem" },
-  [theme.breakpoints.down("md")]: { fontSize: "2.3rem" },
-  [theme.breakpoints.down("sm")]: { fontSize: "1.5rem" },
+  [theme.breakpoints.down("md")]: { fontSize: "2.5rem" },
+  [theme.breakpoints.down("sm")]: { fontSize: "2.15rem" },
 }));
 const TextTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2.5rem",
   fontWeight: 300,
   [theme.breakpoints.down("lg")]: { fontSize: "2rem" },
-  [theme.breakpoints.down("md")]: { fontSize: "1.5rem" },
-  [theme.breakpoints.down("sm")]: { fontSize: "1rem" },
+  [theme.breakpoints.down("md")]: { fontSize: "1.75rem" },
+  [theme.breakpoints.down("sm")]: { fontSize: "1.5rem" },
 }));
 
 const ButtonStyle = styled(Button)(({ theme }) => ({
   textTransform: "none",
-  fontSize: "1rem",
+  fontSize: "1.05rem",
   marginTop: "1rem",
   width: "fit-content",
   color: "#fff",
@@ -35,12 +35,12 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
     border: "1px solid #1976d2",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "0.7rem",
+    fontSize: "0.8rem",
     marginTop: "0.65rem",
     padding: "0.4rem 0.8rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "0.55rem",
+    fontSize: "0.75rem",
     marginTop: "0.5rem",
     padding: "0.3rem 0.7rem",
   },
@@ -49,8 +49,7 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
 const IconButton = styled(Button)(({ theme }) => ({
   minWidth: 0,
   padding: "8px",
-  marginLeft: "7px",
-  marginRight: "7px",
+  margin: "0 7px",
   color: "#fff",
   backgroundColor: "transparent",
   border: "1px solid #fff",
@@ -60,7 +59,8 @@ const IconButton = styled(Button)(({ theme }) => ({
     border: "1px solid #1976d2",
   },
   [theme.breakpoints.down("sm")]: {
-    padding: "6px",
+    padding: "4px",
+    margin: "0 3px",
   },
 }));
 
