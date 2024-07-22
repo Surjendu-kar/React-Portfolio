@@ -83,7 +83,11 @@ const TextTitle = styled(Typography)(({ theme }) => ({
 
 function MainCard({ projectName, projectTitle, mainImg, link }: CardProps) {
   return (
-    <a href={link} style={{ textDecoration: "none", color: "inherit" }}>
+    <a
+      href={link}
+      style={{ textDecoration: "none", color: "inherit" }}
+      target="_blank"
+    >
       <MainBox>
         <ImgBox>
           <Img src={mainImg} alt="" className="img-fluid" />

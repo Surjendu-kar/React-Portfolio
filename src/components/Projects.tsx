@@ -24,7 +24,7 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff", // Changed text color to white for better contrast
+  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -32,7 +32,7 @@ const Heading = styled(Typography)(({ theme }) => ({
 const HrLine = styled(Box)(({ theme }) => ({
   width: "40px",
   height: "5px",
-  backgroundColor: "#ffffff", // Changed line color to white for better contrast
+  backgroundColor: "#ffffff",
   margin: "0 auto",
   [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
