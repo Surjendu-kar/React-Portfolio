@@ -29,10 +29,13 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
   color: "#fff",
   border: "1px solid #fff",
   backgroundColor: "transparent",
+  transition: "0.5s",
+
   "&:hover": {
-    color: "#1976d2",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    color: "#fff",
+    backgroundColor: "transparent",
     border: "1px solid #1976d2",
+    letterSpacing: "0.15em",
   },
   [theme.breakpoints.down("md")]: {
     fontSize: "0.8rem",
