@@ -13,16 +13,15 @@ const MainBox = styled(Box)(({ theme }) => ({
   backfaceVisibility: "hidden",
   backgroundColor: "#11152c",
   borderRadius: "10px",
-  // boxShadow: "0 0 15px rgba(255, 255, 255, 0.3)", // Added white shadow for 3D effect
   overflow: "hidden",
   transition: "transform 0.3s",
   color: "white",
   height: "100%",
   // padding: "1rem 2rem",
-  boxShadow: "0 0 6px rgba(255, 255, 255, 0.5)",
+  boxShadow: "0 10px 10px rgba(0, 0, 0, 1.3)",
 
   "&:hover": {
-    boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)",
+    boxShadow: "0 10px 10px rgba(255, 255, 255, 0.5)",
     "& img": {
       transform: "scale(1.3)",
     },

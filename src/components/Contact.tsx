@@ -158,32 +158,6 @@ const Contact = () => {
                         Simply fill the from and send me an email.
                       </p>
                     </div>
-                    <div className="socials">
-                      <ul>
-                        <li>
-                          <a
-                            href="https://github.com/Dev-Surjendu"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <span className="ico-circle">
-                              <i className="ion-social-github"></i>
-                            </span>
-                          </a>
-                        </li>
-                        <li>
-                          <a
-                            href="https://www.linkedin.com/in/surjendu-kar"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <span className="ico-circle">
-                              <i className="ion-social-linkedin"></i>
-                            </span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
                   </div>
                 </div>
               </div>

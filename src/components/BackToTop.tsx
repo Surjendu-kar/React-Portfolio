@@ -38,6 +38,10 @@ const BackToTop = () => {
       className="back-to-top animated"
       onClick={scrollToTop}
       ref={backToTopRef}
+      style={{
+        backgroundColor: "rgb(27 31 58)",
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 10.3)",
+      }}
     >
       <i className="fa fa-chevron-up"></i>
     </a>

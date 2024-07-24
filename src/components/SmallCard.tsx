@@ -13,16 +13,18 @@ const MainBox = styled(Box)(({ theme }) => ({
   backfaceVisibility: "hidden",
   backgroundColor: "#11152c",
   borderRadius: "10px",
-  boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
   overflow: "hidden",
   transition: "transform 0.3s",
   color: "white",
   height: "100%",
   // padding: "1rem 2rem",
-  "&:hover": {
-    transform: "scale(1.05)",
-    boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)", // Enhanced shadow on hover
+  boxShadow: "0 10px 10px rgba(0, 0, 0, 1.3)",
 
+  "&:hover": {
+    boxShadow: "0 10px 10px rgba(255, 255, 255, 0.5)",
+    "& img": {
+      transform: "scale(1.3)",
+    },
   },
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -47,17 +49,13 @@ const Img = styled("img")(({ theme }) => ({
   width: "100%",
   height: "25rem",
   transition: "all 1s",
-  borderRadius: "20px",
+  borderRadius: "10px",
 
   [theme.breakpoints.down("md")]: { width: "100%", height: "15rem" },
   [theme.breakpoints.down("sm")]: {
     width: "100%",
     height: "20rem",
     borderRadius: "10px",
-  },
-
-  "&:hover": {
-    transform: "scale(1.3)",
   },
 }));
 

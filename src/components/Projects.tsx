@@ -13,6 +13,9 @@ import { styled } from "@mui/system";
 import Gemini from "../assets/gemini.png";
 import NextLevelFood from "../assets/nextLevelFood.png";
 import Telegram from "../assets/telegram.png";
+import TripVive from "../assets/TripVibe.png";
+import NextEvent from "../assets/NextEvent.png";
+
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
@@ -81,8 +84,9 @@ const Projects = () => {
       }}
     >
       <Container>
+        {/* react projects */}
         <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
-          <Heading>Main Projects</Heading>
+          <Heading>React Projects</Heading>
           <HrLine />
         </Box>
 
@@ -111,17 +115,6 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
-                projectName={"NextLevel Food"}
-                projectTitle="NextLevel Food For NextLevel Foodies using NextJS [currently in development phase]"
-                mainImg={NextLevelFood}
-                link={"https://foodies-food.vercel.app/"}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-
-          <MainProjectBox>
-            <AnimatedCard direction="right">
-              <MainCard
                 projectName={"HealthHarbor"}
                 projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
                 mainImg={HealthHarbor_Img}
@@ -131,7 +124,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Movie Magnet"}
                 projectTitle={
@@ -144,7 +137,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"SkySight"}
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
@@ -155,12 +148,52 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
                 mainImg={Tenzies_Img}
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+        </MainProjects>
+
+        <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
+          <Heading>NextJS Learning Projects</Heading>
+          <HrLine />
+        </Box>
+
+        <MainProjects>
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"TripVibe"}
+                projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
+                mainImg={TripVive}
+                link={"https://trip-vibe.vercel.app/"}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"NextLevel Food"}
+                projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
+                mainImg={NextLevelFood}
+                link={"https://foodies-food.vercel.app/"}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"NextEvents"}
+                projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
+                mainImg={NextEvent}
+                link={"https://show-events.vercel.app/"}
               />
             </AnimatedCard>
           </MainProjectBox>

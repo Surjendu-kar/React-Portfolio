@@ -23,6 +23,10 @@ const HrLine = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
 }));
+const Highlight = styled(Typography)(({ theme }) => ({
+  color: "#FABD2F", 
+  fontWeight: "bold",
+}));
 
 const about_me = [
   {
@@ -42,8 +46,8 @@ const about_me = [
   },
   {
     id: "fourth-p-about",
-    content:
-      "Currently, I am expanding my skill set by learning Next.js and MongoDB to further enhance my capabilities as a frontend developer.",
+    highlight:
+      " Currently, I am expanding my skill set by learning Next.js and MongoDB to further enhance my capabilities as a frontend developer.",
   },
 ];
 
@@ -83,9 +87,16 @@ const About = () => {
             <HrLine />
 
             {about_me.map((content) => (
-              <Typography key={content.id} sx={{ fontSize: "1.1rem", mb: 2 }}>
-                {content.content}
-              </Typography>
+              <Box key={content.id}>
+                <Typography sx={{ fontSize: "1.1rem", mb: 2 }}>
+                  {content.content}
+                </Typography>
+                {content.highlight && (
+                  <Highlight sx={{ fontSize: "1.1rem", mb: 2 }}>
+                    {content.highlight}
+                  </Highlight>
+                )}
+              </Box>
             ))}
           </Box>
         </AnimatedCard>
