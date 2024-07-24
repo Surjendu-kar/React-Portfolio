@@ -19,9 +19,13 @@ const MainBox = styled(Box)(({ theme }) => ({
   color: "white",
   height: "100%",
   // padding: "1rem 2rem",
+  boxShadow: "0 0 6px rgba(255, 255, 255, 0.5)",
+
   "&:hover": {
-    transform: "scale(1.05)",
-    boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)", // Enhanced shadow on hover
+    boxShadow: "0 0 25px rgba(255, 255, 255, 0.5)",
+    "& img": {
+      transform: "scale(1.3)",
+    },
   },
   [theme.breakpoints.down("lg")]: {},
   [theme.breakpoints.down("md")]: {
@@ -46,7 +50,7 @@ const Img = styled("img")(({ theme }) => ({
   width: "100%",
   height: "18rem",
   transition: "all 1s",
-  borderRadius: "20px",
+  borderRadius: "10px",
 
   [theme.breakpoints.down("md")]: { width: "100%", height: "15rem" },
   [theme.breakpoints.down("sm")]: {
@@ -54,15 +58,12 @@ const Img = styled("img")(({ theme }) => ({
     height: "12rem",
     borderRadius: "10px",
   },
-
-  "&:hover": {
-    transform: "scale(1.3)",
-  },
 }));
 
 const TitleBox = styled(Box)(({ theme }) => ({
   padding: "1rem",
-  minHeight: "13rem",
+  height: "14rem",
+
   [theme.breakpoints.down("lg")]: { height: "12rem" },
   [theme.breakpoints.down("md")]: { minHeight: "11rem", padding: "0.7rem" },
   [theme.breakpoints.down("sm")]: { height: "7rem", padding: "0.7rem" },

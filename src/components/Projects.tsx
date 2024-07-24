@@ -12,6 +12,7 @@ import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
 import Gemini from "../assets/gemini.png";
 import NextLevelFood from "../assets/nextLevelFood.png";
+import Telegram from "../assets/telegram.png";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
@@ -96,9 +97,19 @@ const Projects = () => {
               />
             </AnimatedCard>
           </MainProjectBox>
-
           <MainProjectBox>
             <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Telegram-Clone"}
+                projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat_id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
+                mainImg={Telegram}
+                link={"https://its-my-telegram-clone.vercel.app/"}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"NextLevel Food"}
                 projectTitle="NextLevel Food For NextLevel Foodies using NextJS [currently in development phase]"
@@ -109,7 +120,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"HealthHarbor"}
                 projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
@@ -120,7 +131,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Movie Magnet"}
                 projectTitle={
@@ -133,7 +144,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"SkySight"}
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
@@ -144,7 +155,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
