@@ -34,6 +34,13 @@ const MainBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     marginBottom: "0rem",
     borderRadius: "10px",
+    boxShadow: "0 5px 5px rgba(0, 0, 0, 1.3)",
+    "&:hover": {
+      boxShadow: "0 5px 5px rgba(255, 255, 255, 0.5)",
+      "& img": {
+        transform: "scale(1.1)",
+      },
+    },
   },
 }));
 
