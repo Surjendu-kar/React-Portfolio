@@ -45,7 +45,7 @@ const Navbar = () => {
       id="mainNav"
     >
       <div className="container">
-        <a className="navbar-brand" href="https://github.com/Dev-Surjendu">
+        <a className="navbar-brand" href="https://github.com/Surjendu-kar" target="_blank">
           <Img src={logo} alt="logo" />
         </a>
         <button
