@@ -20,7 +20,7 @@ import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
 const Container = styled(Box)(({ theme }) => ({
-  width: "90%",
+  width: "100%",
   [theme.breakpoints.down("md")]: { width: "100%" },
 }));
 
@@ -79,8 +79,9 @@ const Projects = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#0d1224", // Same background color as the other sections
-        py: 12, // Adding padding for top and bottom
+        backgroundColor: "#0d1224",
+        py: 12,
+        overflow: "hidden",
       }}
     >
       <Container>
@@ -116,7 +117,7 @@ const Projects = () => {
             <AnimatedCard direction="left">
               <MainCard
                 projectName={"HealthHarbor"}
-                projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase technologies. This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
+                projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase . This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
                 mainImg={HealthHarbor_Img}
                 link={"https://health-harbor-beta.vercel.app"}
               />
