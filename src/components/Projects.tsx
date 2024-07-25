@@ -20,7 +20,7 @@ import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
 const Container = styled(Box)(({ theme }) => ({
-  width: "100%",
+  width: "90%",
   [theme.breakpoints.down("md")]: { width: "100%" },
 }));
 
