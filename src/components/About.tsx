@@ -1,7 +1,7 @@
 import React from "react";
 import myImage from "../assets/mynewImg.png";
 import Skills from "./Skills";
-import { Box, styled, Typography } from "@mui/material";
+import { Box, styled, Typography, useTheme } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
@@ -24,7 +24,7 @@ const HrLine = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {},
 }));
 const Highlight = styled(Typography)(({ theme }) => ({
-  color: "#FABD2F", 
+  color: "#FABD2F",
   fontWeight: "bold",
 }));
 
@@ -52,6 +52,7 @@ const about_me = [
 ];
 
 const About = () => {
+  const theme = useTheme();
   return (
     <Box
       component="section"
@@ -62,6 +63,10 @@ const About = () => {
         backgroundColor: "#0d1224",
         color: "white",
         textAlign: "center",
+        [theme.breakpoints.down("sm")]: {
+          pt: "3rem",
+          pb: 0,
+        },
       }}
     >
       <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>

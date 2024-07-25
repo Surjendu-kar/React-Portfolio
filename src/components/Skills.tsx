@@ -9,6 +9,7 @@ import {
   CardMedia,
   CardContent,
   styled,
+  useTheme,
 } from "@mui/material";
 import nextjsSvg from "../assets/skills/nextJS.svg";
 import reactSvg from "../assets/skills/react.svg";
@@ -31,12 +32,12 @@ import vitejsSvg from "../assets/skills/vitejs.svg";
 import supabase from "../assets/skills/supabase.svg";
 import chakra from "../assets/skills/chakra.svg";
 
-import "./glow.css"; // Ensure you import the glow styles
+import "./glow.css";
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff", // Changed text color to white for better contrast
+  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -44,11 +45,38 @@ const Heading = styled(Typography)(({ theme }) => ({
 const HrLine = styled(Box)(({ theme }) => ({
   width: "40px",
   height: "5px",
-  backgroundColor: "#ffffff", // Changed line color to white for better contrast
+  backgroundColor: "#ffffff",
   margin: "0 auto",
   [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
 }));
+
+const SkillCard = styled(Card)(({ theme }) => ({
+  backgroundColor: "#11152c",
+  borderRadius: 2,
+  boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
+  textAlign: "center",
+  transition: "transform 0.3s",
+  "&:hover": {
+    transform: "scale(1.15)",
+  },
+  padding: "1rem 2rem",
+  [theme.breakpoints.down("sm")]: {
+    padding: "0.5rem 1rem",
+  },
+}));
+
+const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
+  width: 50,
+  height: 50,
+  margin: "0 auto",
+  // mb: 2,
+  [theme.breakpoints.down("sm")]: {
+    width: 30,
+    height: 30,
+  },
+}));
+
 const skillsData = [
   "NextJS",
   "ReactJS",
@@ -100,6 +128,7 @@ const skillsImage = (skill) => {
 };
 
 function Skills() {
+  const theme = useTheme();
   return (
     <Box
       id="skills"
@@ -107,7 +136,6 @@ function Skills() {
         py: 5,
         backgroundColor: "#0d1224",
         color: "white",
-        borderTop: "1px solid #25213b",
         textAlign: "center",
         overflow: "hidden",
       }}
@@ -130,42 +158,23 @@ function Skills() {
             key={id}
             sx={{ display: "inline-block", mx: 2, marginTop: "1rem" }}
           >
-            <Card
-              className="skill-card"
-              sx={{
-                backgroundColor: "#11152c",
-                borderRadius: 2,
-                boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-                textAlign: "center",
-                transition: "transform 0.3s",
-                "&:hover": {
-                  transform: "scale(1.15)",
-                },
-                padding: "1rem 2rem",
-              }}
-            >
+            <SkillCard>
               <CardContent>
-                <CardMedia
-                  component="img"
-                  image={skillsImage(skill)}
-                  alt={skill}
-                  sx={{
-                    width: 40,
-                    height: 40,
-                    margin: "0 auto",
-                    mb: 2,
-                  }}
-                />
+                <CardMediaStyle component="img" image={skillsImage(skill)} />
                 <Typography
                   variant="body1"
                   sx={{
+                    mt: "1rem",
                     color: "white",
+                    [theme.breakpoints.down("sm")]: {
+                      fontSize: "0.75rem",
+                    },
                   }}
                 >
                   {skill}
                 </Typography>
               </CardContent>
-            </Card>
+            </SkillCard>
           </Box>
         ))}
       </Marquee>

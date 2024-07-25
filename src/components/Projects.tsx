@@ -6,7 +6,7 @@ import AstroNest_Img from "../assets/astronaut.jpg";
 import Tenzies_Img from "../assets/Tenzies_Img.png";
 import Instantech_Img from "../assets/infinite_img.webp";
 import FlagNForecast_Img from "../assets/Flag&Forecast.jpg";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import MainCard from "./MainCard";
 import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
@@ -72,6 +72,7 @@ const SmallProjectBox = styled(Box)(({ theme }) => ({
 }));
 
 const Projects = () => {
+  const theme = useTheme();
   return (
     <Box
       id="project"
@@ -82,6 +83,9 @@ const Projects = () => {
         backgroundColor: "#0d1224",
         py: 12,
         overflow: "hidden",
+        [theme.breakpoints.down("sm")]: {
+          pt: "1rem",
+        },
       }}
     >
       <Container>

@@ -32,7 +32,6 @@ const MainBox = styled(Box)(({ theme }) => ({
     borderRadius: "20px",
   },
   [theme.breakpoints.down("sm")]: {
-    marginBottom: "0rem",
     borderRadius: "10px",
     boxShadow: "0 5px 5px rgba(0, 0, 0, 1.3)",
     "&:hover": {
