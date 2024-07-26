@@ -38,26 +38,26 @@ const Contact = () => {
       formData.append(key, value);
     });
 
-    fetch("https://formspree.io/f/rahulkar9988@gmail.com", {
+    fetch("https://formspree.io/f/mdknenvk", {
       method: "POST",
-      body: formData,
+      body: JSON.stringify(formState),
       headers: {
         Accept: "application/json",
+        "Content-Type": "application/json",
       },
     })
       .then((response) => {
         if (response.ok) {
+          setFormState({ name: "", email: "", subject: "", message: "" });
           alert("Message sent successfully!");
-          // Reset form or any other action on successful submission
         } else {
-          response.json().then((data) => {
-            if (data.errors) {
-              // Handle errors
-            }
-          });
+          throw new Error("Form submission failed");
         }
       })
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      });
   };
 
   return (
@@ -83,6 +83,22 @@ const Contact = () => {
                         </div>
                         <div id="errormessage"></div>
                         <div className="row">
+                          <div className="col-md-12 mb-3">
+                            <div className="form-group">
+                              <input
+                                type="text"
+                                className="form-control"
+                                name="name"
+                                id="name"
+                                placeholder="Your Name"
+                                onChange={handleInputChange}
+                                value={formState.name}
+                                data-rule="minlen:4"
+                                data-msg="Please enter at least 4 chars"
+                              />
+                              <div className="validation"></div>
+                            </div>
+                          </div>
                           <div className="col-md-12 mb-3">
                             <div className="form-group">
                               <input

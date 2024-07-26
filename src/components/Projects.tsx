@@ -6,7 +6,7 @@ import AstroNest_Img from "../assets/astronaut.jpg";
 import Tenzies_Img from "../assets/Tenzies_Img.png";
 import Instantech_Img from "../assets/infinite_img.webp";
 import FlagNForecast_Img from "../assets/Flag&Forecast.jpg";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import MainCard from "./MainCard";
 import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
@@ -73,6 +73,8 @@ const SmallProjectBox = styled(Box)(({ theme }) => ({
 
 const Projects = () => {
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       id="project"
@@ -222,17 +224,28 @@ const Projects = () => {
           </SmallProjectBox>
 
           <SmallProjectBox>
-            <BlurCard>
-              <SmallCard
-                projectName={"FlagNForecast"}
-                projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
-                mainImg={FlagNForecast_Img}
-                link={"https://flag-and-forecast.vercel.app/"}
-              />
-            </BlurCard>
+            {isSmallScreen ? (
+              <AnimatedCard direction="right">
+                <SmallCard
+                  projectName={"FlagNForecast"}
+                  projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
+                  mainImg={FlagNForecast_Img}
+                  link={"https://flag-and-forecast.vercel.app/"}
+                />
+              </AnimatedCard>
+            ) : (
+              <BlurCard>
+                <SmallCard
+                  projectName={"FlagNForecast"}
+                  projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
+                  mainImg={FlagNForecast_Img}
+                  link={"https://flag-and-forecast.vercel.app/"}
+                />
+              </BlurCard>
+            )}
           </SmallProjectBox>
           <SmallProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction={isSmallScreen ? "left" : "right"}>
               <SmallCard
                 projectName={"Instantech"}
                 projectTitle={`Developed a React and TypeScript web application implementing infinite scrolling, where new documents are dynamically loaded both as the user scrolls and at 3-second intervals.`}

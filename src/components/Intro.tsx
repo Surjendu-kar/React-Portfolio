@@ -3,6 +3,7 @@ import "./stars.scss";
 import Typed from "react-typed";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Heading = styled(Typography)(({ theme }) => ({
   color: "#fff",
@@ -38,12 +39,12 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
     letterSpacing: "0.15em",
   },
   [theme.breakpoints.down("md")]: {
-    fontSize: "0.8rem",
+    fontSize: "0.85rem",
     marginTop: "0.65rem",
     padding: "0.4rem 0.8rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: "0.75rem",
+    fontSize: "0.8rem",
     marginTop: "0.5rem",
     padding: "0.3rem 0.7rem",
   },
@@ -51,7 +52,7 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
 
 const IconButton = styled(Button)(({ theme }) => ({
   minWidth: 0,
-  padding: "8px",
+  padding: "6px",
   margin: "0 7px",
   color: "#fff",
   backgroundColor: "transparent",
@@ -61,9 +62,16 @@ const IconButton = styled(Button)(({ theme }) => ({
     backgroundColor: "rgba(255, 255, 255, 0.1)",
     border: "1px solid #1976d2",
   },
+  "& svg": {
+    fontSize: "20px",
+  },
   [theme.breakpoints.down("sm")]: {
     padding: "4px",
     margin: "0 3px",
+    borderRadius: "5px",
+    "& svg": {
+      fontSize: "17px", 
+    },
   },
 }));
 
@@ -124,6 +132,13 @@ const Intro = () => {
                     rel="noopener noreferrer"
                   >
                     <GitHubIcon />
+                  </IconButton>
+                  <IconButton
+                    href="mailto:rahulkar9988@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <EmailIcon />
                   </IconButton>
                 </Box>
               </Box>
