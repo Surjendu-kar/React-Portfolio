@@ -1,4 +1,10 @@
-import { Box, Tooltip, Typography } from "@mui/material";
+import {
+  Box,
+  Tooltip,
+  Typography,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import { styled } from "@mui/system";
 
 interface CardProps {
@@ -96,6 +102,12 @@ const tooltipStyles = {
   boxShadow: "0 2px 10px rgba(250, 189, 47, 0.5)",
 };
 
+const tooltipStylesSm = {
+  ...tooltipStyles,
+  fontSize: "0.6rem",
+  padding: "4px 8px",
+};
+
 function SmallCard({
   projectName,
   projectTitle,
@@ -103,12 +115,14 @@ function SmallCard({
   link,
   technologies,
 }: CardProps) {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Tooltip
       title={technologies.join(", ")}
       componentsProps={{
         tooltip: {
-          sx: tooltipStyles,
+          sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
         },
       }}
       arrow
