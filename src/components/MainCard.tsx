@@ -1,10 +1,18 @@
-import { Box, Typography, styled } from "@mui/material";
+import {
+  Box,
+  Tooltip,
+  Typography,
+  styled,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 
 interface CardProps {
   projectName: string;
   projectTitle: string;
   mainImg: string;
   link: string;
+  technologies: string[];
 }
 
 const MainBox = styled(Box)(({ theme }) => ({
@@ -87,27 +95,59 @@ const TextTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: { fontSize: "0.6rem" },
 }));
 
-function MainCard({ projectName, projectTitle, mainImg, link }: CardProps) {
+const tooltipStyles = {
+  fontSize: "0.9rem",
+  background: "#ffb405",
+  color: "#000",
+  fontWeight: 600,
+  letterSpacing: "0.25px",
+  boxShadow: "0 2px 10px rgba(250, 189, 47, 0.5)",
+};
+const tooltipStylesSm = {
+  ...tooltipStyles,
+  fontSize: "0.6rem",
+  padding: "4px 8px",
+};
+
+function MainCard({
+  projectName,
+  projectTitle,
+  mainImg,
+  link,
+  technologies,
+}: CardProps) {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <a
-      href={link}
-      style={{ textDecoration: "none", color: "inherit" }}
-      target="_blank"
+    <Tooltip
+      title={technologies.join(", ")}
+      componentsProps={{
+        tooltip: {
+          sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
+        },
+      }}
+      arrow
     >
-      <MainBox>
-        <ImgBox>
-          <Img src={mainImg} alt="" className="img-fluid" />
-        </ImgBox>
-        <TitleBox>
-          <Box>
+      <a
+        href={link}
+        style={{ textDecoration: "none", color: "inherit" }}
+        target="_blank"
+      >
+        <MainBox>
+          <ImgBox>
+            <Img src={mainImg} alt="" className="img-fluid" />
+          </ImgBox>
+          <TitleBox>
             <Box>
-              <Heading>{projectName}</Heading>
-              <TextTitle>{projectTitle}</TextTitle>
+              <Box>
+                <Heading>{projectName}</Heading>
+                <TextTitle>{projectTitle}</TextTitle>
+              </Box>
             </Box>
-          </Box>
-        </TitleBox>
-      </MainBox>
-    </a>
+          </TitleBox>
+        </MainBox>
+      </a>
+    </Tooltip>
   );
 }
 

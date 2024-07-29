@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 interface CardProps {
@@ -6,6 +6,7 @@ interface CardProps {
   projectTitle: string;
   mainImg: string;
   link: string;
+  technologies: string[];
 }
 const MainBox = styled(Box)(({ theme }) => ({
   marginBottom: "3rem",
@@ -86,9 +87,32 @@ const TextTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("sm")]: { fontSize: "0.52rem" },
 }));
 
-function SmallCard({ projectName, projectTitle, mainImg, link }: CardProps) {
+const tooltipStyles = {
+  fontSize: "0.9rem",
+  background: "#ffb405",
+  color: "#000",
+  fontWeight: 600,
+  letterSpacing: "0.25px",
+  boxShadow: "0 2px 10px rgba(250, 189, 47, 0.5)",
+};
+
+function SmallCard({
+  projectName,
+  projectTitle,
+  mainImg,
+  link,
+  technologies,
+}: CardProps) {
   return (
-    <Box>
+    <Tooltip
+      title={technologies.join(", ")}
+      componentsProps={{
+        tooltip: {
+          sx: tooltipStyles,
+        },
+      }}
+      arrow
+    >
       <a href={link} style={{ textDecoration: "none", color: "inherit" }}>
         <MainBox>
           <ImgBox>
@@ -104,7 +128,7 @@ function SmallCard({ projectName, projectTitle, mainImg, link }: CardProps) {
           </TitleBox>
         </MainBox>
       </a>
-    </Box>
+    </Tooltip>
   );
 }
 

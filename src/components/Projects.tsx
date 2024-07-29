@@ -105,6 +105,7 @@ const Projects = () => {
                 projectTitle={`Currently in development phase.`}
                 mainImg={Gemini}
                 link={"https://itsmy-gemini-clone.vercel.app/"}
+                technologies={["React", "Material-UI", "TypeScript"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -115,6 +116,7 @@ const Projects = () => {
                 projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
                 mainImg={Telegram}
                 link={"https://its-my-telegram-clone.vercel.app/"}
+                technologies={["React", "Material-UI", "API Integration"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -126,6 +128,13 @@ const Projects = () => {
                 projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase . This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
                 mainImg={HealthHarbor_Img}
                 link={"https://health-harbor-beta.vercel.app"}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "MUI",
+                  "Supabase",
+                  "Stripe",
+                ]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -139,6 +148,7 @@ const Projects = () => {
                 }
                 mainImg={MovieMagnet_Img}
                 link={"https://movie-magnet-one.vercel.app/"}
+                technologies={["React", "Scss", "API Integration"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -150,6 +160,7 @@ const Projects = () => {
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
                 mainImg={SkySight_Img}
                 link={"https://skysight-v2.vercel.app/"}
+                technologies={["React", "API Integration"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -161,6 +172,7 @@ const Projects = () => {
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
                 mainImg={Tenzies_Img}
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
+                technologies={["React"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -179,6 +191,7 @@ const Projects = () => {
                 projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
                 mainImg={TripVive}
                 link={"https://trip-vibe.vercel.app/"}
+                technologies={["NextJS", "MongoDB"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -190,6 +203,7 @@ const Projects = () => {
                 projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
                 mainImg={NextLevelFood}
                 link={"https://foodies-food.vercel.app/"}
+                technologies={["NextJS", "Tailwind Css"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -201,6 +215,7 @@ const Projects = () => {
                 projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
                 mainImg={NextEvent}
                 link={"https://show-events.vercel.app/"}
+                technologies={["NextJS"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -219,6 +234,7 @@ const Projects = () => {
                 projectTitle={`Developed a React and TypeScript web app that allows users to retrieve astronaut details either by entering an astronaut ID or by clicking a 'Random Astronaut' button for random astronaut information.`}
                 mainImg={AstroNest_Img}
                 link={"https://myastro-nest.vercel.app/"}
+                technologies={["React", "TypeScript"]}
               />
             </AnimatedCard>
           </SmallProjectBox>
@@ -231,6 +247,7 @@ const Projects = () => {
                   projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
                   mainImg={FlagNForecast_Img}
                   link={"https://flag-and-forecast.vercel.app/"}
+                  technologies={["React", "TypeScript"]}
                 />
               </AnimatedCard>
             ) : (
@@ -240,6 +257,7 @@ const Projects = () => {
                   projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
                   mainImg={FlagNForecast_Img}
                   link={"https://flag-and-forecast.vercel.app/"}
+                  technologies={["React", "TypeScript"]}
                 />
               </BlurCard>
             )}
@@ -251,6 +269,7 @@ const Projects = () => {
                 projectTitle={`Developed a React and TypeScript web application implementing infinite scrolling, where new documents are dynamically loaded both as the user scrolls and at 3-second intervals.`}
                 mainImg={Instantech_Img}
                 link={"https://instantech-orcin.vercel.app/"}
+                technologies={["React", "TypeScript"]}
               />
             </AnimatedCard>
           </SmallProjectBox>
