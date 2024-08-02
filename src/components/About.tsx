@@ -106,6 +106,59 @@ const About = () => {
           </Box>
         </AnimatedCard>
       </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          mt: 4,
+        }}
+      >
+        <Heading>Internship Experience</Heading>
+        <HrLine />
+        <Box
+          textAlign="left"
+          sx={{
+            backgroundColor: "#11152c",
+            boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
+            padding: "2rem",
+            borderRadius: "10px",
+            maxWidth: "800px",
+            width: "100%",
+            transition: "transform 0.3s",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+        >
+          <Typography sx={{ fontSize: "1.1rem", mb: 2 }}>
+            <strong>
+              Qubited, Indore - ReactJs Intern [ June 2023 - Sept 2023 ]
+            </strong>
+            <ul style={{ marginTop: "10px" }}>
+              <li>
+                Developed and optimized React components using TypeScript and
+                JavaScript.
+              </li>
+              <li>
+                Implemented performance enhancement strategies and code
+                optimization techniques.
+              </li>
+              <li>
+                Utilized react-router, Material-UI, and Tailwind CSS for
+                efficient UI development.
+              </li>
+              <li>
+                Integrated Firebase authentication and real-time database
+                functionalities.
+              </li>
+            </ul>
+          </Typography>
+        </Box>
+      </Box>
+
       <Skills />
     </Box>
   );
