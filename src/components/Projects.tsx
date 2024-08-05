@@ -15,6 +15,7 @@ import NextLevelFood from "../assets/nextLevelFood.png";
 import Telegram from "../assets/telegram.png";
 import TripVive from "../assets/TripVibe.png";
 import NextEvent from "../assets/NextEvent.png";
+import AdBanner from "../assets/AdBanner.png";
 
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
@@ -187,6 +188,17 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
+                projectName={"Ad Banners"}
+                projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
+                mainImg={AdBanner}
+                link={"https://ad-banners.vercel.app/"}
+                technologies={["NextJS", "Material-UI", "TypeScript"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
                 projectName={"TripVibe"}
                 projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
                 mainImg={TripVive}
@@ -197,7 +209,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"NextLevel Food"}
                 projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
@@ -209,7 +221,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"NextEvents"}
                 projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
