@@ -4,8 +4,8 @@
   font-family: "Outfit", sans-serif !important;
 }
 body {
-  background-color: #f5f5f5 !important;
-  color: #4e4e4e !important;
+  background-color: #0d1224 !important;
+  color: #ffff !important;
 }
 
 h1,
@@ -590,7 +590,6 @@ a:hover {
 .intro {
   height: 100vh;
   position: relative;
-  color: #fff;
 }
 
 .intro .intro-content {

@@ -23,7 +23,6 @@ const MainBox = styled(Box)(({ theme }) => ({
   borderRadius: "10px",
   overflow: "hidden",
   transition: "transform 0.3s",
-  color: "white",
   height: "100%",
   // padding: "1rem 2rem",
   boxShadow: "0 10px 10px rgba(0, 0, 0, 1.3)",

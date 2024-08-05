@@ -29,7 +29,6 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -83,7 +82,6 @@ const Projects = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#0d1224",
         py: 12,
         overflow: "hidden",
         [theme.breakpoints.down("sm")]: {

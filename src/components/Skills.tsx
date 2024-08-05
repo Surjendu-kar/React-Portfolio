@@ -1,6 +1,3 @@
-// @flow strict
-
-import React from "react";
 import Marquee from "react-fast-marquee";
 import {
   Box,
@@ -37,7 +34,6 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -134,8 +130,6 @@ function Skills() {
       id="skills"
       sx={{
         py: 5,
-        backgroundColor: "#0d1224",
-        color: "white",
         textAlign: "center",
         overflow: "hidden",
       }}

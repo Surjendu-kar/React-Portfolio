@@ -6,7 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
 
 const Heading = styled(Typography)(({ theme }) => ({
-  color: "#fff",
+  // color: "#fff",
   fontSize: "4.5rem",
   fontWeight: "600",
   fontFamily: "var(--bs-body-font-family)",

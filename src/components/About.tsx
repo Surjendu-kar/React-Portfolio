@@ -1,4 +1,3 @@
-import React from "react";
 import myImage from "../assets/mynewImg.png";
 import Skills from "./Skills";
 import { Box, styled, Typography, useTheme } from "@mui/material";
@@ -9,7 +8,6 @@ const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
   textTransform: "uppercase",
-  color: "#ffffff",
   [theme.breakpoints.down("md")]: { fontSize: "2rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.6rem" },
 }));
@@ -23,7 +21,7 @@ const HrLine = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {},
   [theme.breakpoints.down("sm")]: {},
 }));
-const Highlight = styled(Typography)(({ theme }) => ({
+const Highlight = styled(Typography)(() => ({
   color: "#FABD2F",
   fontWeight: "bold",
 }));
@@ -60,8 +58,6 @@ const About = () => {
       sx={{
         pt: "5rem",
         pb: 12,
-        backgroundColor: "#0d1224",
-        color: "white",
         textAlign: "center",
         [theme.breakpoints.down("sm")]: {
           pt: "3rem",
@@ -106,7 +102,7 @@ const About = () => {
           </Box>
         </AnimatedCard>
       </Box>
-      
+
       <AnimatedCard direction="right">
         <Box
           sx={{
@@ -114,7 +110,7 @@ const About = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            mt: 4,
+            mt: "4rem",
           }}
         >
           <Heading>Internship Experience</Heading>

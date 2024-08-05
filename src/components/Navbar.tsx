@@ -11,6 +11,14 @@ const Img = styled("img")(({ theme }) => ({
   },
 }));
 
+const CircleLogo = styled("div")({
+  height: "50px",
+  width: "50px",
+  borderRadius: "50%",
+  display: "inline-block",
+  border: "2px solid #fff", // White border for visibility
+});
+
 const Navbar = () => {
   const [logo, setLogo] = useState(logo1);
   const [isCollapsed, setIsCollapsed] = useState(true);
