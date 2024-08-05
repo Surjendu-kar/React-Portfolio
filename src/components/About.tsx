@@ -111,6 +111,7 @@ const About = () => {
             justifyContent: "center",
             alignItems: "center",
             mt: "4rem",
+            overflow: "hidden",
           }}
         >
           <Heading>Internship Experience</Heading>
