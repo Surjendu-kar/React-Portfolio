@@ -59,6 +59,7 @@ const About = () => {
         pt: "5rem",
         pb: 12,
         textAlign: "center",
+        overflow: "hidden",
         [theme.breakpoints.down("sm")]: {
           pt: "3rem",
           pb: 0,
