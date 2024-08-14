@@ -56,7 +56,7 @@ const About = () => {
       component="section"
       id="about"
       sx={{
-        pt: "5rem",
+        pt: "8rem",
         pb: 12,
         textAlign: "center",
         overflow: "hidden",
@@ -106,6 +106,7 @@ const About = () => {
 
       <AnimatedCard direction="right">
         <Box
+          id="internship"
           sx={{
             display: "flex",
             flexDirection: "column",

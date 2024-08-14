@@ -462,32 +462,34 @@ a:hover {
 
 .navbar-b.navbar-reduce {
   transition: all 0.5s ease-in-out;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
+  background-color: #fff;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
+  color: #fff;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {

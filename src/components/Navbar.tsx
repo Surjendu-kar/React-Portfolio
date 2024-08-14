@@ -4,20 +4,13 @@ import logo2 from "../img/male.png";
 import { styled } from "@mui/material";
 
 const Img = styled("img")(({ theme }) => ({
-  maxWidth: "100px",
+  width: "70px",
+  height: "70px",
   [theme.breakpoints.down("md")]: { maxWidth: "80px" },
   [theme.breakpoints.down("sm")]: {
     maxWidth: "60px",
   },
 }));
-
-const CircleLogo = styled("div")({
-  height: "50px",
-  width: "50px",
-  borderRadius: "50%",
-  display: "inline-block",
-  border: "2px solid #fff", // White border for visibility
-});
 
 const Navbar = () => {
   const [logo, setLogo] = useState(logo1);
@@ -27,7 +20,7 @@ const Navbar = () => {
     const handleScroll = () => {
       if (window.pageYOffset > 50) {
         setNavBarClass("navbar-reduce");
-        setLogo(logo2);
+        // setLogo(logo2);
       } else {
         setNavBarClass("navbar-trans");
         setLogo(logo1);
@@ -40,20 +33,17 @@ const Navbar = () => {
 
   const handleNavCollapse = () => setIsCollapsed(!isCollapsed);
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <nav
       className={`navbar navbar-b navbar-expand-md fixed-top ${navBarClass}`}
       id="mainNav"
     >
       <div className="container">
-        <a className="navbar-brand" href="https://github.com/Surjendu-kar" target="_blank">
+        <a
+          className="navbar-brand"
+          href="https://github.com/Surjendu-kar"
+          target="_blank"
+        >
           <Img src={logo} alt="logo" />
         </a>
         <button
@@ -73,31 +63,22 @@ const Navbar = () => {
         >
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-              <a
-                className="nav-link active"
-                onClick={() => scrollToSection("home")}
-              >
+              <a className="nav-link " href="#home">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" onClick={() => scrollToSection("about")}>
+              <a className="nav-link" href="#about">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                onClick={() => scrollToSection("project")}
-              >
+              <a className="nav-link" href="#project">
                 Project
               </a>
             </li>
             <li className="nav-item">
-              <a
-                className="nav-link"
-                onClick={() => scrollToSection("contact")}
-              >
+              <a className="nav-link" href="#contact">
                 Contact
               </a>
             </li>
