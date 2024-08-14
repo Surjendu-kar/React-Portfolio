@@ -28,8 +28,18 @@ import pythonSvg from "../assets/skills/python.svg";
 import vitejsSvg from "../assets/skills/vitejs.svg";
 import supabase from "../assets/skills/supabase.svg";
 import chakra from "../assets/skills/chakra.svg";
-
 import "./glow.css";
+
+const MainConatainer = styled(Box)(({ theme }) => ({
+  paddingTop: "6rem",
+  textAlign: "center",
+  overflow: "hidden",
+  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("sm")]: {
+    paddingTop: "1rem",
+  },
+}));
+
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
   fontWeight: "bold",
@@ -126,14 +136,7 @@ const skillsImage = (skill) => {
 function Skills() {
   const theme = useTheme();
   return (
-    <Box
-      id="skills"
-      sx={{
-        py: 5,
-        textAlign: "center",
-        overflow: "hidden",
-      }}
-    >
+    <MainConatainer id="skills">
       <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
         <Heading>Skills</Heading>
         <HrLine />
@@ -172,7 +175,7 @@ function Skills() {
           </Box>
         ))}
       </Marquee>
-    </Box>
+    </MainConatainer>
   );
 }
 

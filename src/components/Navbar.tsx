@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 import logo1 from "../img/male1.png";
 import logo2 from "../img/male.png";
-import { styled } from "@mui/material";
+import { styled, Tooltip } from "@mui/material";
 
 const Img = styled("img")(({ theme }) => ({
   width: "70px",
   height: "70px",
   [theme.breakpoints.down("md")]: { maxWidth: "80px" },
   [theme.breakpoints.down("sm")]: {
-    maxWidth: "60px",
+    width: "60px",
+    height: "60px",
   },
 }));
 
@@ -39,13 +40,16 @@ const Navbar = () => {
       id="mainNav"
     >
       <div className="container">
-        <a
-          className="navbar-brand"
-          href="https://github.com/Surjendu-kar"
-          target="_blank"
-        >
-          <Img src={logo} alt="logo" />
-        </a>
+        <Tooltip title="Visit my GitHub" arrow placement="bottom">
+          <a
+            className="navbar-brand"
+            href="https://github.com/Surjendu-kar"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Img src={logo} alt="logo" />
+          </a>
+        </Tooltip>
         <button
           className={"navbar-toggler" + (!isCollapsed ? "" : " collapsed")}
           type="button"
@@ -73,8 +77,13 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
+              <a className="nav-link" href="#skills">
+                Skills
+              </a>
+            </li>
+            <li className="nav-item">
               <a className="nav-link" href="#project">
-                Project
+                Projects
               </a>
             </li>
             <li className="nav-item">

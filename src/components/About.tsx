@@ -104,6 +104,9 @@ const About = () => {
         </AnimatedCard>
       </Box>
 
+      
+
+      <Skills />
       <AnimatedCard direction="right">
         <Box
           id="internship"
@@ -112,7 +115,7 @@ const About = () => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            mt: "4rem",
+            mt: "5rem",
             overflow: "hidden",
           }}
         >
@@ -159,8 +162,6 @@ const About = () => {
           </Box>
         </Box>
       </AnimatedCard>
-
-      <Skills />
     </Box>
   );
 };
