@@ -167,7 +167,7 @@ const Contact = () => {
                       <h5 className="title-left">Get in Touch</h5>
                     </div>
                     <div className="more-info">
-                      <p className="lead">
+                      <p style={{ color: "black", fontSize: "1.2rem" }}>
                         Whether you want to get in touch, talk about a project
                         collaboration, or just say hi, I'd love to hear from
                         you.
