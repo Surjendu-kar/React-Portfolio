@@ -16,7 +16,7 @@ import Telegram from "../assets/telegram.png";
 import TripVive from "../assets/TripVibe.png";
 import NextEvent from "../assets/NextEvent.png";
 import AdBanner from "../assets/AdBanner.png";
-
+import BookAi from "../assets/BookAi.png";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 
@@ -108,20 +108,9 @@ const Projects = () => {
               />
             </AnimatedCard>
           </MainProjectBox>
-          <MainProjectBox>
-            <AnimatedCard direction="right">
-              <MainCard
-                projectName={"Telegram-Clone"}
-                projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
-                mainImg={Telegram}
-                link={"https://its-my-telegram-clone.vercel.app/"}
-                technologies={["React", "Material-UI", "API Integration"]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"HealthHarbor"}
                 projectTitle={`Developed HealthHarbor, a cutting-edge healthcare platform leveraging ReactJS, TypeScript, MUI, and Supabase . This robust platform caters to two distinct user roles: patients and doctors. Doctors are required to submit their qualifications for thorough admin approval before their profiles are activated. Patients have the privilege of viewing doctor profiles and feedback without the need for registration. However, to book appointments and provide feedback, patients must log in to their accounts. The system seamlessly integrates with Stripe, ensuring secure and reliable payment transactions.`}
@@ -139,7 +128,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Movie Magnet"}
                 projectTitle={
@@ -148,6 +137,18 @@ const Projects = () => {
                 mainImg={MovieMagnet_Img}
                 link={"https://movie-magnet-one.vercel.app/"}
                 technologies={["React", "Scss", "API Integration"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Telegram-Clone"}
+                projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
+                mainImg={Telegram}
+                link={"https://its-my-telegram-clone.vercel.app/"}
+                technologies={["React", "Material-UI", "API Integration"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -167,18 +168,30 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="right">
               <MainCard
+                projectName={"Book-AI-replica"}
+                projectTitle={`This project replicates the "Pricing" section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI.`}
+                mainImg={BookAi}
+                link={"https://book-ai-replica.vercel.app/"}
+                technologies={["React", "MUI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <BlurCard>
+              <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
                 mainImg={Tenzies_Img}
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
                 technologies={["React"]}
               />
-            </AnimatedCard>
+            </BlurCard>
           </MainProjectBox>
         </MainProjects>
 
         <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-          <Heading>NextJS Learning Projects</Heading>
+          <Heading>NextJS Projects</Heading>
           <HrLine />
         </Box>
 
