@@ -19,6 +19,7 @@ import AdBanner from "../assets/AdBanner.png";
 import BookAi from "../assets/BookAi.png";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
+import CryptoFlipImg from "../assets/CryptoFlipImg.png";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -101,10 +102,10 @@ const Projects = () => {
             <AnimatedCard direction="left">
               <MainCard
                 projectName={"Gemini-Clone"}
-                projectTitle={`Currently in development phase.`}
+                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
                 mainImg={Gemini}
                 link={"https://itsmy-gemini-clone.vercel.app/"}
-                technologies={["React", "Material-UI", "TypeScript"]}
+                technologies={["React", "TypeScript", "Material-UI"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -144,6 +145,20 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="right">
               <MainCard
+                projectName={"CryptoFlip"}
+                projectTitle={
+                  "This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript for strong typing. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. Additionally, we provide a simulated 10 ETH free balance for testing and interaction purposes. The project is currently in the development phase."
+                }
+                mainImg={CryptoFlipImg}
+                link={"https://crypto-flip.vercel.app/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
                 projectName={"Telegram-Clone"}
                 projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
                 mainImg={Telegram}
@@ -154,7 +169,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"SkySight"}
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
@@ -166,7 +181,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Book-AI-replica"}
                 projectTitle={`This project replicates the "Pricing" section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI.`}
@@ -178,7 +193,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <BlurCard>
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
@@ -186,7 +201,7 @@ const Projects = () => {
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
                 technologies={["React"]}
               />
-            </BlurCard>
+            </AnimatedCard>
           </MainProjectBox>
         </MainProjects>
 
