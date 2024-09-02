@@ -92,7 +92,7 @@ const Intro = () => {
                 <strong className="text-slider">
                   <Typed
                     strings={[
-                      "Front End Developer",
+                      "Full Stack Developer",
                       "Software Engineer",
                       "Let's Connect!",
                     ]}
