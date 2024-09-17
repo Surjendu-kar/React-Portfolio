@@ -219,7 +219,7 @@ const Projects = () => {
                 projectTitle={"currently in the development phase."}
                 mainImg={HrManagementImg}
                 link={"https://my-hr-management.vercel.app/today"}
-                technologies={["NextJS", "Material-UI", "TypeScript"]}
+                technologies={["NextJS", "Material-UI", "TypeScript", "MongoDB"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -231,7 +231,7 @@ const Projects = () => {
                 projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
                 mainImg={AdBanner}
                 link={"https://ad-banners.vercel.app/"}
-                technologies={["NextJS", "Material-UI", "TypeScript"]}
+                technologies={["NextJS", "TypeScript", "Material-UI",]}
               />
             </AnimatedCard>
           </MainProjectBox>
