@@ -219,7 +219,7 @@ const Projects = () => {
                 projectTitle={"currently in the development phase."}
                 mainImg={HrManagementImg}
                 link={"https://my-hr-management.vercel.app/today"}
-                technologies={["NextJS", "Material-UI", "TypeScript"]}
+                technologies={["NextJS", "TypeScript", "Material-UI", "MongoDB"]}
               />
             </AnimatedCard>
           </MainProjectBox>
