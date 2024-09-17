@@ -27,7 +27,7 @@ const MainBox = styled(Box)(({ theme }) => ({
   boxShadow: "0 10px 10px rgba(0, 0, 0, 1.3)",
 
   "&:hover": {
-    boxShadow: "0 10px 10px rgba(255, 255, 255, 0.5)",
+    boxShadow: "0 6px 10px rgba(255, 255, 255, 0.1)",
     "& img": {
       transform: "scale(1.3)",
     },
