@@ -215,10 +215,10 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
-                projectName={"Hr-Management"}
-                projectTitle={"currently in the development phase."}
+                projectName={"TaskAlign-HR"}
+                projectTitle={"Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."}
                 mainImg={HrManagementImg}
-                link={"https://my-hr-management.vercel.app/today"}
+                link={"https://taskalign-hr.vercel.app/"}
                 technologies={["NextJS", "Material-UI", "TypeScript", "MongoDB"]}
               />
             </AnimatedCard>
