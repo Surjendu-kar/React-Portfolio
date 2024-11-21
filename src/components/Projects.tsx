@@ -106,7 +106,7 @@ const Projects = () => {
                 projectName={"ByteUI-Core"}
                 projectTitle={`Developed and published a custom npm package featuring reusable Material-UI components with advanced styling effects. Implemented complex CSS animations using keyframes and styled-components for creating modern UI elements. Created comprehensive component interfaces with customizable properties for colors, backgrounds, and animations. Simplified component reusability by providing clear documentation and type definitions for developer experience.`}
                 mainImg={ByteUICore}
-                link={"https://itsmy-gemini-clone.vercel.app/"}
+                link={"https://byteui-core.vercel.app/"}
                 technologies={["Material-UI", "TypeScript", "npm"]}
               />
             </AnimatedCard>
