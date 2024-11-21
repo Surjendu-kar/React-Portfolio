@@ -21,6 +21,7 @@ import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 import CryptoFlipImg from "../assets/CryptoFlipImg.png";
 import HrManagementImg from "../assets/HrManagementImg.png";
+import ByteUICore from "../assets/ByteUI-Core.png";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -102,11 +103,11 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
-                projectName={"Gemini-Clone"}
-                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
-                mainImg={Gemini}
+                projectName={"ByteUI-Core"}
+                projectTitle={`Developed and published a custom npm package featuring reusable Material-UI components with advanced styling effects. Implemented complex CSS animations using keyframes and styled-components for creating modern UI elements. Created comprehensive component interfaces with customizable properties for colors, backgrounds, and animations. Simplified component reusability by providing clear documentation and type definitions for developer experience.`}
+                mainImg={ByteUICore}
                 link={"https://itsmy-gemini-clone.vercel.app/"}
-                technologies={["React", "TypeScript", "Material-UI"]}
+                technologies={["Material-UI", "TypeScript", "npm"]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -132,6 +133,18 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
+                projectName={"Gemini-Clone"}
+                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
+                mainImg={Gemini}
+                link={"https://itsmy-gemini-clone.vercel.app/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
                 projectName={"Movie Magnet"}
                 projectTitle={
                   "Developed a dynamic React-JS web application for movie enthusiasts, offering real-time access to trending, popular, and top-rated movies and TV shows. The application features comprehensive search functionality for users to easily find their favorite content. Advanced filtering options are integrated to allow customization of the viewing experience."
@@ -144,7 +157,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"CryptoFlip"}
                 projectTitle={
@@ -158,7 +171,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Telegram-Clone"}
                 projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
@@ -170,7 +183,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"SkySight"}
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
@@ -182,7 +195,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Book-AI-replica"}
                 projectTitle={`This project replicates the "Pricing" section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI.`}
@@ -194,7 +207,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <BlurCard>
               <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
@@ -202,7 +215,7 @@ const Projects = () => {
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
                 technologies={["React"]}
               />
-            </AnimatedCard>
+            </BlurCard>
           </MainProjectBox>
         </MainProjects>
 
@@ -216,10 +229,17 @@ const Projects = () => {
             <AnimatedCard direction="left">
               <MainCard
                 projectName={"TaskAlign-HR"}
-                projectTitle={"Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."}
+                projectTitle={
+                  "Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."
+                }
                 mainImg={HrManagementImg}
                 link={"https://taskalign-hr.vercel.app/"}
-                technologies={["NextJS", "Material-UI", "TypeScript", "MongoDB"]}
+                technologies={[
+                  "NextJS",
+                  "Material-UI",
+                  "TypeScript",
+                  "MongoDB",
+                ]}
               />
             </AnimatedCard>
           </MainProjectBox>
@@ -231,7 +251,7 @@ const Projects = () => {
                 projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
                 mainImg={AdBanner}
                 link={"https://ad-banners.vercel.app/"}
-                technologies={["NextJS", "TypeScript", "Material-UI",]}
+                technologies={["NextJS", "TypeScript", "Material-UI"]}
               />
             </AnimatedCard>
           </MainProjectBox>
