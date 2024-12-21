@@ -31,7 +31,7 @@ const about_me = [
   {
     id: "first-p-about",
     content:
-      "Full Stack Developer with expertise in ReactJS, NextJS, and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
+      "Full Stack Developer with expertise in NextJS, ReactJS, and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
   },
   {
     id: "second-p-about",
