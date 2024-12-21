@@ -3,6 +3,7 @@ import Skills from "./Skills";
 import { Box, styled, Typography, useTheme } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
+import Experience from "./Experience";
 
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -30,25 +31,14 @@ const about_me = [
   {
     id: "first-p-about",
     content:
-      "Aspiring Frontend Developer with expertise in ReactJS and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
+      "Full Stack Developer with expertise in ReactJS, NextJS, and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
   },
   {
     id: "second-p-about",
-    content:
-      "During my internship at Qubited, I contributed significantly to the development of a world tour freelancer project, enhancing user experience and interface design. I also have experience in integrating Firebase authentication and real-time database functionalities.",
-  },
-  {
-    id: "third-p-about",
-    content:
-      "I have developed multiple personal projects, including HealthHarbor, a healthcare platform; MovieMagnet, a dynamic movie web application; and SkySight, a comprehensive weather application. My academic background in Computer Application from Dr. B.C Roy Engineering College, coupled with my industrial training, has equipped me with a solid foundation in frontend development.",
-  },
-  {
-    id: "fourth-p-about",
     highlight:
-      " Currently, I am expanding my skill set by learning Next.js and MongoDB to further enhance my capabilities as a frontend developer.",
+      "Currently working as a Full Stack Developer Intern at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
   },
 ];
-
 const About = () => {
   const theme = useTheme();
   return (
@@ -104,63 +94,10 @@ const About = () => {
         </AnimatedCard>
       </Box>
 
-      
-
       <Skills />
+      
       <AnimatedCard direction="right">
-        <Box
-          id="internship"
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            mt: "5rem",
-            overflow: "hidden",
-          }}
-        >
-          <Heading>Internship Experience</Heading>
-          <HrLine />
-          <Box
-            textAlign="left"
-            sx={{
-              backgroundColor: "#11152c",
-              boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
-              padding: "2rem",
-              borderRadius: "10px",
-              maxWidth: "800px",
-              width: "100%",
-              transition: "transform 0.3s",
-              "&:hover": {
-                transform: "scale(1.05)",
-              },
-            }}
-          >
-            <Typography sx={{ fontSize: "1.1rem", mb: 2 }}>
-              <strong>
-                Qubited, Indore - ReactJs Intern [ June 2023 - Sept 2023 ]
-              </strong>
-              <ul style={{ marginTop: "10px" }}>
-                <li>
-                  Developed and optimized React components using TypeScript and
-                  JavaScript.
-                </li>
-                <li>
-                  Implemented performance enhancement strategies and code
-                  optimization techniques.
-                </li>
-                <li>
-                  Utilized react-router, Material-UI, and Tailwind CSS for
-                  efficient UI development.
-                </li>
-                <li>
-                  Integrated Firebase authentication and real-time database
-                  functionalities.
-                </li>
-              </ul>
-            </Typography>
-          </Box>
-        </Box>
+        <Experience />
       </AnimatedCard>
     </Box>
   );
