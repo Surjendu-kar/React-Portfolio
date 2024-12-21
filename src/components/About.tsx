@@ -94,11 +94,11 @@ const About = () => {
         </AnimatedCard>
       </Box>
 
+      {/* skills section*/}
       <Skills />
-      
-      <AnimatedCard direction="right">
-        <Experience />
-      </AnimatedCard>
+
+      {/* experience section */}
+      <Experience />
     </Box>
   );
 };
