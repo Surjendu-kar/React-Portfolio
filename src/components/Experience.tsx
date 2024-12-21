@@ -33,7 +33,7 @@ const ExpCard = styled(Box)(() => ({
 function Experience() {
   return (
     <Box
-      id="internship"
+      id="experience"
       sx={{
         display: "flex",
         flexDirection: "column",
