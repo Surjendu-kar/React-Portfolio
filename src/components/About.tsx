@@ -36,7 +36,7 @@ const about_me = [
   {
     id: "second-p-about",
     highlight:
-      "Currently working as a Full Stack Developer Intern at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
+      "Currently working as a Full Stack Developer at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
   },
 ];
 const About = () => {
