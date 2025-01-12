@@ -43,7 +43,7 @@ function Experience() {
         overflow: "hidden",
       }}
     >
-      <Heading>Internship Experience</Heading>
+      <Heading>Experience</Heading>
       <HrLine />
       <Stack
         textAlign="left"
@@ -56,7 +56,7 @@ function Experience() {
         <AnimatedCard direction="left">
           <ExpCard>
             <strong>
-              Weframe Tech - Full Stack Developer Intern [ Dec 2024 - Present ]
+              Weframe Tech - Full Stack Developer [ Dec 2024 - Present ]
             </strong>
             <ul style={{ marginTop: "10px" }}>
               <li>
