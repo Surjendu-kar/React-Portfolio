@@ -112,8 +112,8 @@ const Intro = () => {
               >
                 <ButtonStyle
                   variant="contained"
-                  href="https://drive.google.com/file/d/15u0oRerMRuamc0jheH3FscN3a-SWGTuz/view?usp=drivesdk"
-                  // target="_blank"
+                  href="https://drive.google.com/file/d/1O_G9EEUddVtkqvLv20eis3sz1hx3bisZ/view?usp=drivesdk"
+                  target="_blank"
                   rel="noopener noreferrer"
                 >
                   View My Resume

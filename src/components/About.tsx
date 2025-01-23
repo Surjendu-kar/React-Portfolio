@@ -30,14 +30,17 @@ const Highlight = styled(Typography)(() => ({
 const about_me = [
   {
     id: "first-p-about",
-    content:
-      "Full Stack Developer with expertise in NextJS, ReactJS, and TypeScript, seeking to leverage my skills in modern web technologies to contribute to innovative projects and grow within a dynamic team. I have hands-on experience in developing and optimizing React components, implementing performance enhancement strategies, and utilizing various UI libraries and frameworks like Material-UI and Tailwind CSS.",
+    content: `Full-Stack Developer with expertise in Next.js, React, and TypeScript, skilled in building comprehensive web
+applications. Proficient in frontend and backend technologies, including Node.js, Firebase, Supabase, and MongoDB.
+Experienced with CMS and Headless Commerce solutions like Builder.io, Directus CMS, and Medusa.js. Proven track
+record of delivering scalable solutions through internship and freelance projects, with a custom npm package
+demonstrating technical innovation.`,
   },
-  {
-    id: "second-p-about",
-    highlight:
-      "Currently working as a Full Stack Developer at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
-  },
+  // {
+  //   id: "second-p-about",
+  //   highlight:
+  //     "Currently working as a Full Stack Developer at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
+  // },
 ];
 const About = () => {
   const theme = useTheme();

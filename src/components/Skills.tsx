@@ -29,6 +29,9 @@ import vitejsSvg from "../assets/skills/vitejs.svg";
 import supabase from "../assets/skills/supabase.svg";
 import chakra from "../assets/skills/chakra.svg";
 import "./glow.css";
+import builderio from "../assets/skills/builder.svg";
+import directus from "../assets/skills/directus.webp";
+import medusa from "../assets/skills/medusa.png";
 
 const MainConatainer = styled(Box)(({ theme }) => ({
   paddingTop: "6rem",
@@ -86,6 +89,9 @@ const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
 const skillsData = [
   "NextJS",
   "ReactJS",
+  "builderio",
+  "directus",
+  "medusa",
   "TypeScript",
   "JavaScript",
   "MUI",
@@ -110,6 +116,9 @@ const skillsImage = (skill) => {
   const images = {
     NextJS: nextjsSvg,
     ReactJS: reactSvg,
+    builderio: builderio,
+    directus: directus,
+    medusa: medusa,
     TypeScript: typescriptSvg,
     JavaScript: javascriptSvg,
     MUI: muiSvg,

@@ -104,23 +104,23 @@ function Experience() {
             >
               <ExpCard>
                 <strong>
-                  Weframe Tech - Full Stack Developer [ Dec 2024 - Present ]
+                  Weframe Tech - Full Stack Developer [ Dec 2024 - Jan 2025 ]
                 </strong>
                 <ul style={{ marginTop: "10px" }}>
                   <li>
-                    Building modern web applications using Next.js, focusing on
+                    Developed modern web applications using Next.js, focusing on
                     server-side rendering and API optimization.
                   </li>
                   <li>
-                    Creating dynamic landing pages and web solutions using
+                    Created dynamic landing pages and web solutions using
                     Builder.io, Directus CMS, and Medusa.js for e-commerce.
                   </li>
                   <li>
-                    Implementing responsive designs and complex UI components
+                    Implemented responsive designs and complex UI components
                     using Tailwind CSS and Material-UI.
                   </li>
                   <li>
-                    Collaborating with cross-functional teams to deliver
+                    Collaborated with cross-functional teams to deliver
                     high-quality full-stack solutions.
                   </li>
                 </ul>
