@@ -32,6 +32,7 @@ import "./glow.css";
 import builderio from "../assets/skills/builder.svg";
 import directus from "../assets/skills/directus.webp";
 import medusa from "../assets/skills/medusa.png";
+import docker from '../assets/skills/docker-svgrepo-com.svg'
 
 const MainConatainer = styled(Box)(({ theme }) => ({
   paddingTop: "6rem",
@@ -89,6 +90,7 @@ const CardMediaStyle = styled(CardMedia)(({ theme }) => ({
 const skillsData = [
   "NextJS",
   "ReactJS",
+  "docker",
   "builderio",
   "directus",
   "medusa",
@@ -116,6 +118,7 @@ const skillsImage = (skill) => {
   const images = {
     NextJS: nextjsSvg,
     ReactJS: reactSvg,
+    docker: docker,
     builderio: builderio,
     directus: directus,
     medusa: medusa,

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import logo1 from "../img/male1.png";
-import logo2 from "../img/male.png";
 import { styled, Tooltip } from "@mui/material";
 
 const Img = styled("img")(({ theme }) => ({
