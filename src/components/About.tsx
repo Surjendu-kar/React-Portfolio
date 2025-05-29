@@ -27,14 +27,19 @@ const Highlight = styled(Typography)(() => ({
   fontWeight: "bold",
 }));
 
+const AboutContent = styled(Typography)(() => ({
+  color: "#ffffffe3",
+  fontSize: "1.1rem",
+  marginBottom: "1rem"
+}));
+
 const about_me = [
   {
     id: "first-p-about",
-    content: `Full-Stack Developer with expertise in Next.js, React, and TypeScript, skilled in building comprehensive web
-applications. Proficient in frontend and backend technologies, including Node.js, Firebase, Supabase, and MongoDB.
-Experienced with CMS and Headless Commerce solutions like Builder.io, Directus CMS, and Medusa.js. Proven track
-record of delivering scalable solutions through internship and freelance projects, with a custom npm package
-demonstrating technical innovation.`,
+    content: `Full-Stack Developer with 8+ months of hands-on professional experience building comprehensive web applications. 
+Key achievements include publishing a custom npm package (ByteUI-Core), completing multiple successful internships across diverse tech companies, 
+and delivering end-to-end full-stack solutions including school management systems and course platforms. Proven track record of delivering 
+scalable web solutions with technical innovation and cross-platform expertise.`,
   },
   // {
   //   id: "second-p-about",
@@ -83,9 +88,9 @@ const About = () => {
 
             {about_me.map((content) => (
               <Box key={content.id}>
-                <Typography sx={{ fontSize: "1.1rem", mb: 2 }}>
+                <AboutContent>
                   {content.content}
-                </Typography>
+                </AboutContent>
                 {content.highlight && (
                   <Highlight sx={{ fontSize: "1.1rem", mb: 2 }}>
                     {content.highlight}

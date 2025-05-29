@@ -22,6 +22,9 @@ import BlurCard from "./BlurCard";
 import CryptoFlipImg from "../assets/CryptoFlipImg.png";
 import HrManagementImg from "../assets/HrManagementImg.png";
 import ByteUICore from "../assets/ByteUI-Core.png";
+import KNow from "../assets/k-now.png";
+import Learnix from "../assets/learnix.png";
+
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -133,6 +136,30 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
+                projectName={"Learnix"}
+                projectTitle={`Developed during my internship at Madrocket Technologies & Media Careers, this modern, responsive school website template focuses on user experience and accessibility. Implemented interactive UI components and animations to create an engaging educational platform. The template features a clean, professional design optimized for educational institutions.`}
+                mainImg={Learnix}
+                link={"https://learnix-iqnaut.firebaseapp.com/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"K-now"}
+                projectTitle={`Created during my internship at Madrocket Technologies & Media Careers, this comprehensive school website template focuses on modern design and user accessibility. Implemented responsive layouts and interactive components to showcase school information effectively. The template is designed to provide an intuitive experience for students, parents, and staff.`}
+                mainImg={KNow}
+                link={"https://k-now-iqnaut.web.app/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
                 projectName={"Gemini-Clone"}
                 projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
                 mainImg={Gemini}
@@ -205,6 +232,8 @@ const Projects = () => {
               />
             </AnimatedCard>
           </MainProjectBox>
+
+          
 
           <MainProjectBox>
             <BlurCard>

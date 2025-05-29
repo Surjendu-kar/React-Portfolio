@@ -33,6 +33,8 @@ import builderio from "../assets/skills/builder.svg";
 import directus from "../assets/skills/directus.webp";
 import medusa from "../assets/skills/medusa.png";
 import docker from '../assets/skills/docker-svgrepo-com.svg'
+import Razorpay from '../assets/skills/razorpay.png'
+
 
 const MainConatainer = styled(Box)(({ theme }) => ({
   paddingTop: "6rem",
@@ -91,6 +93,7 @@ const skillsData = [
   "NextJS",
   "ReactJS",
   "docker",
+  "Razorpay",
   "builderio",
   "directus",
   "medusa",
@@ -119,6 +122,7 @@ const skillsImage = (skill) => {
     NextJS: nextjsSvg,
     ReactJS: reactSvg,
     docker: docker,
+    Razorpay: Razorpay,
     builderio: builderio,
     directus: directus,
     medusa: medusa,
@@ -139,7 +143,7 @@ const skillsImage = (skill) => {
     Java: javaSvg,
     Python: pythonSvg,
     Git: gitSvg,
-    Vite: vitejsSvg,
+    Vite: vitejsSvg
   };
 
   return images[skill];
