@@ -99,31 +99,41 @@ function Experience() {
         }}
       >
         <AnimatedCard direction="left">
-          <ExpCardLink
-            href="https://madrocket.in/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Tooltip
+            title="Click to visit Madrocket Technologies website"
+            componentsProps={{
+              tooltip: {
+                sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
+              },
+            }}
+            arrow
           >
-            <ExpCard>
-              <CompanyHeading>
-                Madrocket Technologies & Media Careers - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
-              </CompanyHeading>
-              <ul style={{ marginTop: "10px" }}>
-                <ExpDescription>
-                  Built modern, responsive school website templates (Learnix and K-now) focusing on user experience and accessibility.
-                </ExpDescription>
-                <ExpDescription>
-                  Developed and enhanced a comprehensive school management system with automated report card generation, CSV bulk upload functionality for students/teachers/staff, integrated test management modules for periodic and topic-wise assessments, and integrated Quill editor for customizable school templates.
-                </ExpDescription>
-                <ExpDescription>
-                  Enhanced IQnaut website by redesigning the Careers page with animated sections, improving course cards with real-time enrollment data and pricing, developed a custom backend for Razorpay payment integration with automated email notifications and PDF invoice generation.
-                </ExpDescription>
-                <ExpDescription>
-                  Architected and developed a complete Course Management Platform from scratch with features including Authentication & User Management, Role-Based Access Control, Course Management, Interactive Course Details & Video Modules, Batch Management, Payment Integration with Razorpay, Assignment Management, and Ranking.
-                </ExpDescription>
-              </ul>
-            </ExpCard>
-          </ExpCardLink>
+            <ExpCardLink
+              href="https://iqnaut.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExpCard>
+                <CompanyHeading>
+                  Madrocket Technologies & Media Careers - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
+                </CompanyHeading>
+                <ul style={{ marginTop: "10px" }}>
+                  <ExpDescription>
+                    Built modern, responsive school website templates (Learnix and K-now) focusing on user experience and accessibility.
+                  </ExpDescription>
+                  <ExpDescription>
+                    Developed and enhanced a comprehensive school management system with automated report card generation, CSV bulk upload functionality for students/teachers/staff, integrated test management modules for periodic and topic-wise assessments, and integrated Quill editor for customizable school templates.
+                  </ExpDescription>
+                  <ExpDescription>
+                    Enhanced IQnaut website by redesigning the Careers page with animated sections, improving course cards with real-time enrollment data and pricing, developed a custom backend for Razorpay payment integration with automated email notifications and PDF invoice generation.
+                  </ExpDescription>
+                  <ExpDescription>
+                    Architected and developed a complete Course Management Platform from scratch with features including Authentication & User Management, Role-Based Access Control, Course Management, Interactive Course Details & Video Modules, Batch Management, Payment Integration with Razorpay, Assignment Management, and Ranking.
+                  </ExpDescription>
+                </ul>
+              </ExpCard>
+            </ExpCardLink>
+          </Tooltip>
         </AnimatedCard>
 
         <AnimatedCard direction="right">
