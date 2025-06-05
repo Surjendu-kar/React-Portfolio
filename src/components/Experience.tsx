@@ -100,7 +100,7 @@ function Experience() {
       >
         <AnimatedCard direction="left">
           <Tooltip
-            title="Click to visit Madrocket Technologies website"
+            title="Click to visit Iqnaut website"
             componentsProps={{
               tooltip: {
                 sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
@@ -115,7 +115,7 @@ function Experience() {
             >
               <ExpCard>
                 <CompanyHeading>
-                  Madrocket Technologies & Media Careers - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
+                  Iqnaut - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
                 </CompanyHeading>
                 <ul style={{ marginTop: "10px" }}>
                   <ExpDescription>
