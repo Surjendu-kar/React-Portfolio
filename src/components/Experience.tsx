@@ -100,7 +100,7 @@ function Experience() {
       >
         <AnimatedCard direction="left">
           <Tooltip
-            title="Click to visit Iqnaut website"
+            title="Click to check the certificate"
             componentsProps={{
               tooltip: {
                 sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
@@ -109,13 +109,13 @@ function Experience() {
             arrow
           >
             <ExpCardLink
-              href="https://iqnaut.com/"
+              href="https://drive.google.com/file/d/19sCTP10SZ6G-z-i_fJM5XXN89y0FPKyO/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <ExpCard>
                 <CompanyHeading>
-                  Iqnaut - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
+                  Madrocket Technologies - Full Stack Developer Intern [ Feb 2025 - June 2025 ]
                 </CompanyHeading>
                 <ul style={{ marginTop: "10px" }}>
                   <ExpDescription>
@@ -138,7 +138,7 @@ function Experience() {
 
         <AnimatedCard direction="right">
           <Tooltip
-            title="Click to visit Weframe Tech's website"
+            title="Click to check the certificate"
             componentsProps={{
               tooltip: {
                 sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
@@ -147,7 +147,7 @@ function Experience() {
             arrow
           >
             <ExpCardLink
-              href="https://www.weframetech.com/"
+              href="https://drive.google.com/file/d/11BOHajHs88B4_KIIjNErqpkaFM2ft74b/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -176,7 +176,7 @@ function Experience() {
 
         <AnimatedCard direction="left">
           <Tooltip
-            title="Click to visit Qubited's website"
+            title="Click to check the certificate"
             componentsProps={{
               tooltip: {
                 sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
@@ -185,7 +185,7 @@ function Experience() {
             arrow
           >
             <ExpCardLink
-              href="https://qubited.com/"
+              href="https://drive.google.com/file/d/13ikCfjgQOHOZojs12umNO5xwxgkX7vxO/"
               target="_blank"
               rel="noopener noreferrer"
             >
