@@ -2,13 +2,9 @@
 import HealthHarbor_Img from "../assets/health.png";
 import SkySight_Img from "../assets/skySIght-img.jpg";
 import MovieMagnet_Img from "../assets/MovieMagnet.png";
-import AstroNest_Img from "../assets/astronaut.jpg";
 import Tenzies_Img from "../assets/Tenzies_Img.png";
-import Instantech_Img from "../assets/infinite_img.webp";
-import FlagNForecast_Img from "../assets/Flag&Forecast.jpg";
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import MainCard from "./MainCard";
-import SmallCard from "./SmallCard";
 import { styled } from "@mui/system";
 import Gemini from "../assets/gemini.png";
 import NextLevelFood from "../assets/nextLevelFood.png";
@@ -24,7 +20,10 @@ import HrManagementImg from "../assets/HrManagementImg.png";
 import ByteUICore from "../assets/ByteUI-Core.png";
 import KNow from "../assets/k-now.png";
 import Learnix from "../assets/learnix.png";
-
+import SpreadsheetPrototype from "../assets/spreadsheet-prototype.png";
+import Ecommerce from "../assets/E-commerce.png";
+import MotoLog from "../assets/motoLog.png";
+import PizzaJoint from "../assets/PizzaJoint.png";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
@@ -160,18 +159,6 @@ const Projects = () => {
           <MainProjectBox>
             <AnimatedCard direction="left">
               <MainCard
-                projectName={"Gemini-Clone"}
-                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
-                mainImg={Gemini}
-                link={"https://itsmy-gemini-clone.vercel.app/"}
-                technologies={["React", "TypeScript", "Material-UI"]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-
-          <MainProjectBox>
-            <AnimatedCard direction="right">
-              <MainCard
                 projectName={"Movie Magnet"}
                 projectTitle={
                   "Developed a dynamic React-JS web application for movie enthusiasts, offering real-time access to trending, popular, and top-rated movies and TV shows. The application features comprehensive search functionality for users to easily find their favorite content. Advanced filtering options are integrated to allow customization of the viewing experience."
@@ -184,7 +171,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"CryptoFlip"}
                 projectTitle={
@@ -198,7 +185,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Telegram-Clone"}
                 projectTitle={`Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure.`}
@@ -210,7 +197,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"SkySight"}
                 projectTitle={`A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map.`}
@@ -222,7 +209,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Book-AI-replica"}
                 projectTitle={`This project replicates the "Pricing" section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI.`}
@@ -233,10 +220,8 @@ const Projects = () => {
             </AnimatedCard>
           </MainProjectBox>
 
-          
-
           <MainProjectBox>
-            <BlurCard>
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"Tenzies"}
                 projectTitle={`Developed a dice-based project using react where users click the Roll button to align all dice to the same value. Implemented a feature allowing users to freeze individual dice at their current value. Enhanced user experience through interactive gameplay mechanics.`}
@@ -244,7 +229,7 @@ const Projects = () => {
                 link={"https://tenzies-game-eight-alpha.vercel.app/"}
                 technologies={["React"]}
               />
-            </BlurCard>
+            </AnimatedCard>
           </MainProjectBox>
         </MainProjects>
 
@@ -256,6 +241,24 @@ const Projects = () => {
         <MainProjects>
           <MainProjectBox>
             <AnimatedCard direction="left">
+              <MainCard
+                projectName={"E-commerce Product Listing"}
+                projectTitle={`A modern, fully-featured e-commerce application built with Next.js 14, TypeScript, and Tailwind CSS. It features a responsive design, advanced filtering system, shopping cart functionality with localStorage persistence using Zustand, and real-time search capabilities. The project includes a pixel-perfect home page with product listings and filters, a product detail page with image carousel and reviews, and a comprehensive cart page with quantity controls and price summary.`}
+                mainImg={Ecommerce}
+                link={"https://whatbytes-eight.vercel.app"}
+                technologies={[
+                  "Next.js 14",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "Zustand",
+                  "Lucide React",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"TaskAlign-HR"}
                 projectTitle={
@@ -274,7 +277,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"Ad Banners"}
                 projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
@@ -285,7 +288,7 @@ const Projects = () => {
             </AnimatedCard>
           </MainProjectBox>
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"TripVibe"}
                 projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
@@ -297,7 +300,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="right">
+            <AnimatedCard direction="left">
               <MainCard
                 projectName={"NextLevel Food"}
                 projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
@@ -309,7 +312,7 @@ const Projects = () => {
           </MainProjectBox>
 
           <MainProjectBox>
-            <AnimatedCard direction="left">
+            <AnimatedCard direction="right">
               <MainCard
                 projectName={"NextEvents"}
                 projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
@@ -321,59 +324,79 @@ const Projects = () => {
           </MainProjectBox>
         </MainProjects>
 
+        {/* New Replica Projects Section */}
         <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-          <Heading>Others</Heading>
+          <Heading>Replica Projects</Heading>
           <HrLine />
         </Box>
 
-        <SmallProjects>
-          <SmallProjectBox>
+        <MainProjects>
+          <MainProjectBox>
             <AnimatedCard direction="left">
-              <SmallCard
-                projectName={"AstroNest"}
-                projectTitle={`Developed a React and TypeScript web app that allows users to retrieve astronaut details either by entering an astronaut ID or by clicking a 'Random Astronaut' button for random astronaut information.`}
-                mainImg={AstroNest_Img}
-                link={"https://myastro-nest.vercel.app/"}
-                technologies={["React", "TypeScript"]}
+              <MainCard
+                projectName={"Gemini-Clone"}
+                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
+                mainImg={Gemini}
+                link={"https://itsmy-gemini-clone.vercel.app/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
               />
             </AnimatedCard>
-          </SmallProjectBox>
+          </MainProjectBox>
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Spreadsheet-Prototype"}
+                projectTitle={`This project is a static, front-end-only React prototype of a spreadsheet view, designed to visually match a provided Figma design and implement core spreadsheet functionalities. It leverages React 18, TypeScript 5.x, Vite, and Tailwind CSS 3.x for a pixel-perfect user experience. Key features include editable cells, dynamic column types with date pickers and dropdowns, keyboard navigation, column resizing, smooth hover effects, and text truncation. The spreadsheet provides a Google Sheet/Excel-like experience, focusing on a clean and readable layout.`}
+                mainImg={SpreadsheetPrototype}
+                link={"https://spreadsheet-prototype.vercel.app/"}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "@tanstack/react-table",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
 
-          <SmallProjectBox>
-            {isSmallScreen ? (
-              <AnimatedCard direction="right">
-                <SmallCard
-                  projectName={"FlagNForecast"}
-                  projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
-                  mainImg={FlagNForecast_Img}
-                  link={"https://flag-and-forecast.vercel.app/"}
-                  technologies={["React", "TypeScript"]}
-                />
-              </AnimatedCard>
-            ) : (
-              <BlurCard>
-                <SmallCard
-                  projectName={"FlagNForecast"}
-                  projectTitle={`Developed a React and TypeScript web app that allows users to input partial or full country names, then displays detailed country information including the flag and capital, with an additional feature to fetch the current weather of the capital.`}
-                  mainImg={FlagNForecast_Img}
-                  link={"https://flag-and-forecast.vercel.app/"}
-                  technologies={["React", "TypeScript"]}
-                />
-              </BlurCard>
-            )}
-          </SmallProjectBox>
-          <SmallProjectBox>
-            <AnimatedCard direction={isSmallScreen ? "left" : "right"}>
-              <SmallCard
-                projectName={"Instantech"}
-                projectTitle={`Developed a React and TypeScript web application implementing infinite scrolling, where new documents are dynamically loaded both as the user scrolls and at 3-second intervals.`}
-                mainImg={Instantech_Img}
-                link={"https://instantech-orcin.vercel.app/"}
-                technologies={["React", "TypeScript"]}
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"MotoLog Landing Page"}
+                projectTitle={`A modern and interactive landing page built with Next.js 15, React 19, and Tailwind CSS 4. This project features dynamic animations using Framer Motion, integrated forms with React Hook Form and Yup for validation, and a sleek UI utilizing Lucide React for icons and Radix UI components. It's designed to provide a engaging user experience, likely for a motorcycle-related application or service.`}
+                mainImg={MotoLog}
+                link={"https://webbywolf-cyan.vercel.app/"}
+                technologies={[
+                  "Next.js 15",
+                  "React 19",
+                  "Tailwind CSS 4",
+                  "Framer Motion",
+
+                  "TypeScript",
+                ]}
               />
             </AnimatedCard>
-          </SmallProjectBox>
-        </SmallProjects>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Pizza Joint"}
+                projectTitle={`A front-end pizza ordering application built with React and Vite, serving as a practice project for learning and implementing Framer Motion. The project utilizes React Router DOM for navigation and is styled with Tailwind CSS, showcasing a clean and responsive user interface for creating custom pizzas.`}
+                mainImg={PizzaJoint}
+                link={"https://pizza-joint-fm.vercel.app/"}
+                technologies={[
+                  "React",
+                  "Vite",
+                  "Framer Motion",
+                  "React Router DOM",
+                  "Tailwind CSS",
+                  "TypeScript",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+        </MainProjects>
       </Container>
     </Box>
   );
