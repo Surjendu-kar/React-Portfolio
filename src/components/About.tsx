@@ -30,16 +30,17 @@ const Highlight = styled(Typography)(() => ({
 const AboutContent = styled(Typography)(() => ({
   color: "#ffffffe3",
   fontSize: "1.1rem",
-  marginBottom: "1rem"
+  marginBottom: "1rem",
 }));
 
-const about_me = [
+const about_me: { id: string; content: string; highlight?: string }[] = [
   {
     id: "first-p-about",
     content: `Full-Stack Developer with 8+ months of hands-on professional experience building comprehensive web applications. 
 Key achievements include publishing a custom npm package (ByteUI-Core), completing multiple successful internships across diverse tech companies, 
 and delivering end-to-end full-stack solutions including school management systems and course platforms. Proven track record of delivering 
 scalable web solutions with technical innovation and cross-platform expertise.`,
+    highlight: "Currently learning Framer Motion.",
   },
   // {
   //   id: "second-p-about",
@@ -88,11 +89,12 @@ const About = () => {
 
             {about_me.map((content) => (
               <Box key={content.id}>
-                <AboutContent>
-                  {content.content}
-                </AboutContent>
+                <AboutContent component="span">{content.content}</AboutContent>
                 {content.highlight && (
-                  <Highlight sx={{ fontSize: "1.1rem", mb: 2 }}>
+                  <Highlight
+                    component="span"
+                    sx={{ fontSize: "1.1rem", marginLeft: "2px" }}
+                  >
                     {content.highlight}
                   </Highlight>
                 )}
