@@ -95,6 +95,80 @@ const Projects = () => {
       }}
     >
       <Container>
+        {/* New Replica Projects Section */}
+        <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
+          <Heading>Replica Projects</Heading>
+          <HrLine />
+        </Box>
+
+        <MainProjects>
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"Gemini-Clone"}
+                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
+                mainImg={Gemini}
+                link={"https://itsmy-gemini-clone.vercel.app/"}
+                technologies={["React", "TypeScript", "Material-UI"]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Spreadsheet-Prototype"}
+                projectTitle={`This project is a static, front-end-only React prototype of a spreadsheet view, designed to visually match a provided Figma design and implement core spreadsheet functionalities. It leverages React 18, TypeScript 5.x, Vite, and Tailwind CSS 3.x for a pixel-perfect user experience. Key features include editable cells, dynamic column types with date pickers and dropdowns, keyboard navigation, column resizing, smooth hover effects, and text truncation. The spreadsheet provides a Google Sheet/Excel-like experience, focusing on a clean and readable layout.`}
+                mainImg={SpreadsheetPrototype}
+                link={"https://spreadsheet-prototype.vercel.app/"}
+                technologies={[
+                  "React",
+                  "TypeScript",
+                  "Tailwind CSS",
+                  "@tanstack/react-table",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="left">
+              <MainCard
+                projectName={"MotoLog Landing Page"}
+                projectTitle={`A modern and interactive landing page built with Next.js 15, React 19, and Tailwind CSS 4. This project features dynamic animations using Framer Motion, integrated forms with React Hook Form and Yup for validation, and a sleek UI utilizing Lucide React for icons and Radix UI components. It's designed to provide a engaging user experience, likely for a motorcycle-related application or service.`}
+                mainImg={MotoLog}
+                link={"https://webbywolf-cyan.vercel.app/"}
+                technologies={[
+                  "Next.js 15",
+                  "React 19",
+                  "Tailwind CSS 4",
+                  "Framer Motion",
+
+                  "TypeScript",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+
+          <MainProjectBox>
+            <AnimatedCard direction="right">
+              <MainCard
+                projectName={"Pizza Joint"}
+                projectTitle={`A front-end pizza ordering application built with React and Vite, serving as a practice project for learning and implementing Framer Motion. The project utilizes React Router DOM for navigation and is styled with Tailwind CSS, showcasing a clean and responsive user interface for creating custom pizzas.`}
+                mainImg={PizzaJoint}
+                link={"https://pizza-joint-fm.vercel.app/"}
+                technologies={[
+                  "React",
+                  "Vite",
+                  "Framer Motion",
+                  "React Router DOM",
+                  "Tailwind CSS",
+                  "TypeScript",
+                ]}
+              />
+            </AnimatedCard>
+          </MainProjectBox>
+        </MainProjects>
+        
         {/* react projects */}
         <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
           <Heading>React Projects</Heading>
@@ -319,80 +393,6 @@ const Projects = () => {
                 mainImg={NextEvent}
                 link={"https://show-events.vercel.app/"}
                 technologies={["NextJS"]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-        </MainProjects>
-
-        {/* New Replica Projects Section */}
-        <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-          <Heading>Replica Projects</Heading>
-          <HrLine />
-        </Box>
-
-        <MainProjects>
-          <MainProjectBox>
-            <AnimatedCard direction="left">
-              <MainCard
-                projectName={"Gemini-Clone"}
-                projectTitle={`This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. The project is currently in the development phase.`}
-                mainImg={Gemini}
-                link={"https://itsmy-gemini-clone.vercel.app/"}
-                technologies={["React", "TypeScript", "Material-UI"]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-          <MainProjectBox>
-            <AnimatedCard direction="right">
-              <MainCard
-                projectName={"Spreadsheet-Prototype"}
-                projectTitle={`This project is a static, front-end-only React prototype of a spreadsheet view, designed to visually match a provided Figma design and implement core spreadsheet functionalities. It leverages React 18, TypeScript 5.x, Vite, and Tailwind CSS 3.x for a pixel-perfect user experience. Key features include editable cells, dynamic column types with date pickers and dropdowns, keyboard navigation, column resizing, smooth hover effects, and text truncation. The spreadsheet provides a Google Sheet/Excel-like experience, focusing on a clean and readable layout.`}
-                mainImg={SpreadsheetPrototype}
-                link={"https://spreadsheet-prototype.vercel.app/"}
-                technologies={[
-                  "React",
-                  "TypeScript",
-                  "Tailwind CSS",
-                  "@tanstack/react-table",
-                ]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-
-          <MainProjectBox>
-            <AnimatedCard direction="left">
-              <MainCard
-                projectName={"MotoLog Landing Page"}
-                projectTitle={`A modern and interactive landing page built with Next.js 15, React 19, and Tailwind CSS 4. This project features dynamic animations using Framer Motion, integrated forms with React Hook Form and Yup for validation, and a sleek UI utilizing Lucide React for icons and Radix UI components. It's designed to provide a engaging user experience, likely for a motorcycle-related application or service.`}
-                mainImg={MotoLog}
-                link={"https://webbywolf-cyan.vercel.app/"}
-                technologies={[
-                  "Next.js 15",
-                  "React 19",
-                  "Tailwind CSS 4",
-                  "Framer Motion",
-
-                  "TypeScript",
-                ]}
-              />
-            </AnimatedCard>
-          </MainProjectBox>
-
-          <MainProjectBox>
-            <AnimatedCard direction="right">
-              <MainCard
-                projectName={"Pizza Joint"}
-                projectTitle={`A front-end pizza ordering application built with React and Vite, serving as a practice project for learning and implementing Framer Motion. The project utilizes React Router DOM for navigation and is styled with Tailwind CSS, showcasing a clean and responsive user interface for creating custom pizzas.`}
-                mainImg={PizzaJoint}
-                link={"https://pizza-joint-fm.vercel.app/"}
-                technologies={[
-                  "React",
-                  "Vite",
-                  "Framer Motion",
-                  "React Router DOM",
-                  "Tailwind CSS",
-                  "TypeScript",
-                ]}
               />
             </AnimatedCard>
           </MainProjectBox>
