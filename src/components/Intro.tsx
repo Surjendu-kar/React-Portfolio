@@ -1,9 +1,10 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import "./stars.scss";
-import Typed from "react-typed";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
+import { motion } from "framer-motion";
 
 const Heading = styled(Typography)(({ theme }) => ({
   // color: "#fff",
@@ -70,12 +71,20 @@ const IconButton = styled(Button)(({ theme }) => ({
     margin: "0 3px",
     borderRadius: "5px",
     "& svg": {
-      fontSize: "17px", 
+      fontSize: "17px",
     },
   },
 }));
 
 const Intro = () => {
+  const [text] = useTypewriter({
+    words: ["Full Stack Developer", "Software Engineer", "Let's Connect!"],
+    loop: true,
+    typeSpeed: 80,
+    deleteSpeed: 30,
+    delaySpeed: 1100,
+  });
+
   return (
     <>
       <div id="home" className="intro route bg-image background">
@@ -86,23 +95,26 @@ const Intro = () => {
         <div className="intro-content display-table">
           <div className="table-cell">
             <div className="container">
-              <Heading>Hello, I am Surjendu</Heading>
-              <TextTitle>
-                <span className="text-slider-items"></span>
-                <strong className="text-slider">
-                  <Typed
-                    strings={[
-                      "Full Stack Developer",
-                      "Software Engineer",
-                      "Let's Connect!",
-                    ]}
-                    typeSpeed={80}
-                    backDelay={1100}
-                    backSpeed={30}
-                    loop
-                  />
-                </strong>
-              </TextTitle>
+              <motion.div
+                initial={{ opacity: 0, y: -70 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                <Heading>Hello, I am Surjendu</Heading>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <TextTitle>
+                  <span className="text-slider-items"></span>
+                  <strong className="text-slider">
+                    {text}
+                    <Cursor cursorStyle="|" />
+                  </strong>
+                </TextTitle>
+              </motion.div>
               <Box
                 sx={{
                   display: "flex",
@@ -115,6 +127,7 @@ const Intro = () => {
                   href="https://drive.google.com/file/d/1EaTK098peanhUuvD2BP8ULTPPRE-F4L4"
                   target="_blank"
                   rel="noopener noreferrer"
+                  component="a"
                 >
                   View My Resume
                 </ButtonStyle>
@@ -123,6 +136,7 @@ const Intro = () => {
                     href="https://www.linkedin.com/in/surjendu-kar/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    component="a"
                   >
                     <LinkedInIcon />
                   </IconButton>
@@ -130,6 +144,7 @@ const Intro = () => {
                     href="https://github.com/Surjendu-kar"
                     target="_blank"
                     rel="noopener noreferrer"
+                    component="a"
                   >
                     <GitHubIcon />
                   </IconButton>
@@ -137,6 +152,7 @@ const Intro = () => {
                     href="mailto:rahulkar9988@gmail.com"
                     target="_blank"
                     rel="noopener noreferrer"
+                    component="a"
                   >
                     <EmailIcon />
                   </IconButton>
