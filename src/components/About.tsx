@@ -4,6 +4,7 @@ import { Box, styled, Typography, useTheme } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
 import BlurCard from "./BlurCard";
 import Experience from "./Experience";
+import { motion } from "framer-motion";
 
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -68,14 +69,22 @@ const About = () => {
       <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>
         <BlurCard>
           <Box>
-            <img
+            <motion.img
               src={myImage}
               alt=""
+              initial={{ boxShadow: "0px 0px 0px rgba(255, 255, 255, 0)" }}
+              animate={{ boxShadow: "0px 0px 60px rgba(255, 255, 255, 1)" }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2,
+                ease: "easeInOut",
+              }}
               style={{
                 width: "70%",
                 maxWidth: "300px",
                 height: "auto",
-                borderRadius: "10%",
+                borderRadius: "50%",
                 margin: "0 auto",
                 display: "block",
               }}
@@ -89,14 +98,28 @@ const About = () => {
 
             {about_me.map((content) => (
               <Box key={content.id}>
-                <AboutContent component="span">{content.content}</AboutContent>
+                <Typography
+                  component="span"
+                  sx={{
+                    color: "#ffffffe3",
+                    fontSize: "1.1rem",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  {content.content}
+                </Typography>
                 {content.highlight && (
-                  <Highlight
+                  <Typography
                     component="span"
-                    sx={{ fontSize: "1.1rem", marginLeft: "2px" }}
+                    sx={{
+                      fontSize: "1.1rem",
+                      marginLeft: "2px",
+                      color: "#FABD2F",
+                      fontWeight: "bold",
+                    }}
                   >
                     {content.highlight}
-                  </Highlight>
+                  </Typography>
                 )}
               </Box>
             ))}
