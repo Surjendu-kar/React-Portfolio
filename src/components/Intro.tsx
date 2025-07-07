@@ -1,10 +1,10 @@
 import { Box, Button, Typography, styled } from "@mui/material";
 import "./stars.scss";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import { motion } from "framer-motion";
 
 const Heading = styled(Typography)(({ theme }) => ({
   // color: "#fff",
@@ -17,7 +17,8 @@ const Heading = styled(Typography)(({ theme }) => ({
 }));
 const TextTitle = styled(Typography)(({ theme }) => ({
   fontSize: "2.5rem",
-  fontWeight: 300,
+  fontWeight: 600,
+  fontFamily: "var(--bs-body-font-family)",
   [theme.breakpoints.down("lg")]: { fontSize: "2rem" },
   [theme.breakpoints.down("md")]: { fontSize: "1.75rem" },
   [theme.breakpoints.down("sm")]: { fontSize: "1.5rem" },
@@ -77,13 +78,45 @@ const IconButton = styled(Button)(({ theme }) => ({
 }));
 
 const Intro = () => {
-  const [text] = useTypewriter({
-    words: ["Full Stack Developer", "Software Engineer", "Let's Connect!"],
-    loop: true,
-    typeSpeed: 80,
-    deleteSpeed: 30,
-    delaySpeed: 1100,
-  });
+  const words = ["Full Stack Developer", "Software Engineer", "Let's Connect!"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 3000); // Change word every 3 seconds (adjust as needed)
+    return () => clearInterval(interval);
+  }, [words.length]);
+
+  const bottomVariants = {
+    initial: { y: "100%", opacity: 0 },
+    enter: {
+      y: "0%",
+      opacity: 1,
+      transition: { type: "spring", damping: 10, stiffness: 100 },
+    },
+    exit: {
+      y: "-100%",
+      opacity: 0,
+      transition: { type: "spring", damping: 10, stiffness: 100 },
+    },
+  };
+
+  const topVariants = {
+    initial: { y: "-100%", opacity: 0 },
+    enter: {
+      y: "0%",
+      opacity: 1,
+      transition: { type: "spring", damping: 10, stiffness: 100 },
+    },
+    exit: {
+      y: "100%",
+      opacity: 0,
+      transition: { type: "spring", damping: 10, stiffness: 100 },
+    },
+  };
+
+  const currentVariants = index % 2 === 0 ? bottomVariants : topVariants;
 
   return (
     <>
@@ -107,12 +140,21 @@ const Intro = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <TextTitle>
-                  <span className="text-slider-items"></span>
-                  <strong className="text-slider">
-                    {text}
-                    <Cursor cursorStyle="|" />
-                  </strong>
+                <TextTitle
+                  style={{ overflow: "hidden", display: "inline-block" }}
+                >
+                  <AnimatePresence mode="wait">
+                    <motion.span
+                      key={index}
+                      variants={currentVariants}
+                      initial="initial"
+                      animate="enter"
+                      exit="exit"
+                      style={{ display: "inline-block" }}
+                    >
+                      {words[index]}
+                    </motion.span>
+                  </AnimatePresence>
                 </TextTitle>
               </motion.div>
               <Box
@@ -124,35 +166,31 @@ const Intro = () => {
               >
                 <ButtonStyle
                   variant="contained"
-                  href="https://drive.google.com/file/d/1EaTK098peanhUuvD2BP8ULTPPRE-F4L4"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   component="a"
+                  href="https://drive.google.com/file/d/1EaTK098peanhUuvD2BP8ULTPPRE-F4L4"
+                  {...{ target: "_blank", rel: "noopener noreferrer" }}
                 >
                   View My Resume
                 </ButtonStyle>
                 <Box sx={{ display: "flex", marginTop: "1rem" }}>
                   <IconButton
-                    href="https://www.linkedin.com/in/surjendu-kar/"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     component="a"
+                    href="https://www.linkedin.com/in/surjendu-kar/"
+                    {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <LinkedInIcon />
                   </IconButton>
                   <IconButton
-                    href="https://github.com/Surjendu-kar"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     component="a"
+                    href="https://github.com/Surjendu-kar"
+                    {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <GitHubIcon />
                   </IconButton>
                   <IconButton
-                    href="mailto:rahulkar9988@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     component="a"
+                    href="mailto:rahulkar9988@gmail.com"
+                    {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <EmailIcon />
                   </IconButton>
