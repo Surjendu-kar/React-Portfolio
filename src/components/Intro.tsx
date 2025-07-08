@@ -83,7 +83,7 @@ const Intro = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // Change word every 3 seconds (adjust as needed)
+    }, 2500);
     return () => clearInterval(interval);
   }, [words.length]);
 
