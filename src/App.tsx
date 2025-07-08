@@ -17,6 +17,7 @@ import Contact from "./components/Contact.js";
 import Intro from "./components/Intro.js";
 import Cursor from "./components/Cursor";
 import Projects from "./components/Projects.js";
+import "./components/stars.scss";
 
 function App() {
   const location = useLocation();
@@ -35,13 +36,18 @@ function App() {
 
   return (
     <React.Fragment>
-      <Cursor />
-      <Navbar />
-      <Intro />
-      <About />
-      <Projects />
-      <Contact />
-      <BackToTop />
+      <>
+        <div id="stars" />
+        <div id="stars2" />
+        <div id="stars3" />
+        <Cursor />
+        <Navbar />
+        <Intro />
+        <About />
+        <Projects />
+        <Contact />
+        <BackToTop />
+      </>
     </React.Fragment>
   );
 }

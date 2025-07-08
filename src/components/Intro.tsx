@@ -1,5 +1,4 @@
 import { Box, Button, Typography, styled } from "@mui/material";
-import "./stars.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -120,11 +119,7 @@ const Intro = () => {
 
   return (
     <>
-      <div id="home" className="intro route bg-image background">
-        <div id="stars" />
-        <div id="stars2" />
-        <div id="stars3" />
-
+      <div id="home" className="intro route">
         <div className="intro-content display-table">
           <div className="table-cell">
             <div className="container">

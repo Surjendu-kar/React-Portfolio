@@ -19,7 +19,8 @@ const MainBox = styled(Box)(({ theme }) => ({
   marginBottom: "1rem",
   WebkitBackfaceVisibility: "hidden",
   backfaceVisibility: "hidden",
-  backgroundColor: "#11152c",
+  backgroundColor: "rgba(255, 255, 255, 0.025)",
+
   borderRadius: "10px",
   overflow: "hidden",
   transition: "transform 0.3s",
@@ -28,9 +29,11 @@ const MainBox = styled(Box)(({ theme }) => ({
   boxShadow: "0 10px 10px rgba(0, 0, 0, 1.3)",
 
   "&:hover": {
-    boxShadow: "0 6px 10px rgba(255, 255, 255, 0.1)",
+    boxShadow: "5px 6px 10px rgba(255, 255, 255, 0.1)",
+    backgroundColor: "rgba(255, 255, 255, 0.05)",
+
     "& img": {
-      transform: "scale(1.3)",
+      transform: "scale(1.2)",
     },
   },
   [theme.breakpoints.down("lg")]: {},

@@ -73,7 +73,7 @@ const About = () => {
               src={myImage}
               alt=""
               initial={{ boxShadow: "0px 0px 0px rgba(255, 255, 255, 0)" }}
-              animate={{ boxShadow: "0px 0px 60px rgba(255, 255, 255, 1)" }}
+              animate={{ boxShadow: "0px 0px 20px rgba(255, 255, 255, 1)" }}
               transition={{
                 repeat: Infinity,
                 repeatType: "reverse",
@@ -81,7 +81,7 @@ const About = () => {
                 ease: "easeInOut",
               }}
               style={{
-                width: "70%",
+                width: "60%",
                 maxWidth: "300px",
                 height: "auto",
                 borderRadius: "50%",

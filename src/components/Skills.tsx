@@ -32,9 +32,8 @@ import "./glow.css";
 import builderio from "../assets/skills/builder.svg";
 import directus from "../assets/skills/directus.webp";
 import medusa from "../assets/skills/medusa.png";
-import docker from '../assets/skills/docker-svgrepo-com.svg'
-import Razorpay from '../assets/skills/razorpay.png'
-
+import docker from "../assets/skills/docker-svgrepo-com.svg";
+import Razorpay from "../assets/skills/razorpay.png";
 
 const MainConatainer = styled(Box)(({ theme }) => ({
   paddingTop: "6rem",
@@ -64,13 +63,14 @@ const HrLine = styled(Box)(({ theme }) => ({
 }));
 
 const SkillCard = styled(Card)(({ theme }) => ({
-  backgroundColor: "#11152c",
-  borderRadius: 2,
+  backgroundColor: "rgba(255, 255, 255, 0.025)",
+  borderRadius: 7,
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
   textAlign: "center",
   transition: "transform 0.3s",
   "&:hover": {
     transform: "scale(1.15)",
+    backgroundColor: "rgba(255, 255, 255, 0.035)",
   },
   padding: "1rem 2rem",
   [theme.breakpoints.down("sm")]: {
@@ -117,8 +117,8 @@ const skillsData = [
   "Git",
 ];
 
-const skillsImage = (skill) => {
-  const images = {
+const skillsImage = (skill: string): string => {
+  const images: { [key: string]: string } = {
     NextJS: nextjsSvg,
     ReactJS: reactSvg,
     docker: docker,
@@ -143,7 +143,7 @@ const skillsImage = (skill) => {
     Java: javaSvg,
     Python: pythonSvg,
     Git: gitSvg,
-    Vite: vitejsSvg
+    Vite: vitejsSvg,
   };
 
   return images[skill];
@@ -153,27 +153,29 @@ function Skills() {
   const theme = useTheme();
   return (
     <MainConatainer id="skills">
+      <div id="stars3" />
       <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
         <Heading>Skills</Heading>
         <HrLine />
       </Box>
       <Marquee
         gradient={false}
-        speed={80}
+        speed={150}
         pauseOnHover={true}
         pauseOnClick={true}
         delay={0}
         play={true}
         direction="left"
+        style={{ overflowY: "hidden" }}
       >
         {skillsData.map((skill, id) => (
           <Box
             key={id}
-            sx={{ display: "inline-block", mx: 2, marginTop: "1rem" }}
+            sx={{ display: "inline-block", mx: 2, padding: "2rem 0rem" }}
           >
             <SkillCard>
               <CardContent>
-                <CardMediaStyle component="img" image={skillsImage(skill)} />
+                <CardMediaStyle image={skillsImage(skill)} />
                 <Typography
                   variant="body1"
                   sx={{

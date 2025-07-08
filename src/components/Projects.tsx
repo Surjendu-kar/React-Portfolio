@@ -81,6 +81,11 @@ const Projects = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
+    <>
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
+    
     <Box
       id="project"
       sx={{
@@ -399,6 +404,7 @@ const Projects = () => {
         </MainProjects>
       </Container>
     </Box>
+    </>
   );
 };
 
