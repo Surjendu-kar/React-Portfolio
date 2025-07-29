@@ -67,7 +67,7 @@ const About = () => {
       }}
     >
       <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>
-        <BlurCard>
+        {/* <BlurCard>
           <Box>
             <motion.img
               src={myImage}
@@ -90,7 +90,7 @@ const About = () => {
               }}
             />
           </Box>
-        </BlurCard>
+        </BlurCard> */}
         <AnimatedCard direction="left">
           <Box mt={4}>
             <Heading> About Me</Heading>
