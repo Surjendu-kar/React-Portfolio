@@ -24,7 +24,7 @@ import Ecommerce from "../assets/E-commerce.png";
 import MotoLog from "../assets/motoLog.png";
 import PizzaJoint from "../assets/PizzaJoint.png";
 import Nexa from "../assets/nexa.png";
-import GlareHover from "./GlareHover";
+import GlareHover from "./ui/GlareHover";
 
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",

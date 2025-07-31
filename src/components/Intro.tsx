@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
-import GlareHover from "./GlareHover";
+import ShinyText from "./ui/ShinyText";
 
 const Heading = styled(Typography)(({ theme }) => ({
   // color: "#fff",
@@ -52,9 +52,9 @@ const ButtonStyle = styled(Button)(({ theme }) => ({
   },
 }));
 
-const IconButton = styled(Button)(({ theme }) => ({
+const IconButton = styled("a")(({ theme }) => ({
   minWidth: 0,
-  padding: "6px",
+  padding: "5px 8px",
   margin: "0 7px",
   color: "#fff",
   backgroundColor: "transparent",
@@ -160,9 +160,13 @@ const Intro = () => {
                   alignItems: "center",
                 }}
               >
+                <ShinyText
+                  text="Just some shiny text!"
+                  disabled={false}
+                  speed={3}
+                />
                 <ButtonStyle
                   variant="contained"
-                  component="a"
                   href="https://drive.google.com/file/d/1NngFzR46TYGa3megPc2EGctynUVxyEX9"
                   {...{ target: "_blank", rel: "noopener noreferrer" }}
                 >
@@ -170,21 +174,18 @@ const Intro = () => {
                 </ButtonStyle>
                 <Box sx={{ display: "flex", marginTop: "1rem" }}>
                   <IconButton
-                    component="a"
                     href="https://www.linkedin.com/in/surjendu-kar/"
                     {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <LinkedInIcon />
                   </IconButton>
                   <IconButton
-                    component="a"
                     href="https://github.com/Surjendu-kar"
                     {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <GitHubIcon />
                   </IconButton>
                   <IconButton
-                    component="a"
                     href="mailto:rahulkar9988@gmail.com"
                     {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
