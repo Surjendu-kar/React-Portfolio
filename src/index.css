@@ -1252,6 +1252,15 @@ footer .copyright {
     @apply bg-background text-foreground;
   }
 }
+/* Fix hamburger button color to stay white */
+.navbar-b.navbar-reduce .navbar-toggler span {
+  background-color: #fff !important;
+}
+
+.navbar-b.navbar-trans .navbar-toggler span {
+  background-color: #fff !important;
+}
+
 /* Custom navbar underline width fix */
 .navbar-b.navbar-trans .nav-link:hover:before,
 .navbar-b.navbar-reduce .nav-link:hover:before,

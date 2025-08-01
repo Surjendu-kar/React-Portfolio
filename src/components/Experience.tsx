@@ -34,7 +34,7 @@ const ExpCardLink = styled("a")({
   width: "100%",
 });
 
-const ExpCard = styled(Box)(() => ({
+const ExpCard = styled(Box)(({ theme }) => ({
   backgroundColor: "rgba(255, 255, 255, 0.025)",
 
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
@@ -44,6 +44,9 @@ const ExpCard = styled(Box)(() => ({
   "&:hover": {
     transform: "scale(1.05)",
     backgroundColor: "#11152c",
+  },
+  "& ul": {
+    paddingLeft: "0",
   },
 }));
 
