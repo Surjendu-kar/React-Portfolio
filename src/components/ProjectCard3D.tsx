@@ -26,9 +26,9 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <CardContainer className="inter-var">
+    <CardContainer className="inter-var w-full h-full flex-1">
       <CardBody
-        className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] dark:border-white/[0.1] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-3 lg:p-6 border"
+        className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] dark:border-white/[0.1] border-black/[0.1] w-full h-auto sm:min-h-[600px] lg:min-h-[680px] rounded-xl p-3 lg:p-6 border flex flex-col"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.025)",
           backdropFilter: "blur(4px)",
@@ -37,7 +37,7 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
       >
         <CardItem
           translateZ="50"
-          className="text-lg sm:text-xl font-bold text-white mb-2"
+          className="text-lg sm:text-xl font-bold text-white mt-2"
         >
           {projectName}
         </CardItem>
@@ -48,7 +48,7 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
             height="1000"
             width="1000"
             className={`${
-              isSmallScreen ? "h-40" : isMediumScreen ? "h-56" : "h-60"
+              isSmallScreen ? "h-40" : isMediumScreen ? "h-56" : "h-80"
             } w-full object-cover rounded-xl group-hover/card:shadow-xl`}
             alt={projectName}
           />
@@ -57,20 +57,14 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
         <CardItem
           as="p"
           translateZ="60"
-          className="text-neutral-300 text-xs sm:text-sm mt-4 leading-relaxed line-clamp-4"
-          style={{
-            display: "-webkit-box",
-            WebkitLineClamp: isSmallScreen ? 3 : 4,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-          }}
+          className="text-neutral-300 text-xs sm:text-sm mt-4 leading-relaxed flex-1"
         >
           {projectTitle}
         </CardItem>
 
-        <CardItem translateZ="40" className="mt-4">
+        <CardItem translateZ="40" className="mt-0">
           <Box className="flex flex-wrap gap-1 sm:gap-2">
-            {technologies.slice(0, isSmallScreen ? 3 : 4).map((tech, index) => (
+            {technologies.map((tech, index) => (
               <Chip
                 key={index}
                 label={tech}
@@ -78,30 +72,18 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
                 sx={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   color: "#fff",
-                  fontSize: isSmallScreen ? "0.6rem" : "0.7rem",
-                  height: isSmallScreen ? "20px" : "24px",
+                  fontSize: isSmallScreen ? "0.6rem" : "0.85rem",
+                  height: isSmallScreen ? "20px" : "26px",
                   "& .MuiChip-label": {
-                    padding: isSmallScreen ? "0 6px" : "0 8px",
+                    padding: isSmallScreen ? "0 6px" : "0 10px",
                   },
                 }}
               />
             ))}
-            {technologies.length > (isSmallScreen ? 3 : 4) && (
-              <Chip
-                label={`+${technologies.length - (isSmallScreen ? 3 : 4)}`}
-                size="small"
-                sx={{
-                  backgroundColor: "rgba(59, 130, 246, 0.3)",
-                  color: "#fff",
-                  fontSize: isSmallScreen ? "0.6rem" : "0.7rem",
-                  height: isSmallScreen ? "20px" : "24px",
-                }}
-              />
-            )}
           </Box>
         </CardItem>
 
-        <div className="flex justify-between items-center mt-4 lg:mt-20">
+        <div className="flex justify-between items-center mt-auto pt-4">
           <CardItem
             translateZ={20}
             as="a"

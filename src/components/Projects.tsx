@@ -58,9 +58,21 @@ const MainProjects = styled(Box)(({ theme }) => ({
 
 const MainProjectBox = styled(Box)(({ theme }) => ({
   width: "45%",
+  minWidth: "45%",
+  maxWidth: "45%",
   overflow: "visible",
-  [theme.breakpoints.down("md")]: {},
-  [theme.breakpoints.down("sm")]: { width: "90%" },
+  display: "flex",
+  flexDirection: "column",
+  [theme.breakpoints.down("md")]: {
+    width: "48%",
+    minWidth: "48%",
+    maxWidth: "48%",
+  },
+  [theme.breakpoints.down("sm")]: {
+    width: "90%",
+    minWidth: "90%",
+    maxWidth: "90%",
+  },
 }));
 
 const Projects = () => {
@@ -171,7 +183,6 @@ const Projects = () => {
                   repoLink="https://github.com/Surjendu-kar/Pizza-Joint-fm"
                   technologies={[
                     "React",
-                    "Vite",
                     "Framer Motion",
                     "React Router DOM",
                     "Tailwind CSS",

@@ -25,6 +25,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, direction }) => {
       animate={inView ? "visible" : "hidden"}
       variants={variants}
       transition={{ duration: 0.8 }}
+      style={{ height: "100%", display: "flex", flexDirection: "column" }}
     >
       {children}
     </motion.div>
