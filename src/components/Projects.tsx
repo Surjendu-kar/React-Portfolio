@@ -79,7 +79,7 @@ const Projects = () => {
           justifyContent: "center",
           alignItems: "center",
           py: 12,
-          overflow: "visible",
+          overflow: "hidden",
           [theme.breakpoints.down("sm")]: {
             pt: "1rem",
           },

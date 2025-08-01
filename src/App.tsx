@@ -10,7 +10,7 @@ import "jquery/dist/jquery.min.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./libs/easing.js";
 import "lightbox2/dist/js/lightbox.min.js";
-import Navbar from "./components/Navbar.js";
+import Navbar from "./components/Navbar";
 import About from "./components/About.js";
 import BackToTop from "./components/BackToTop.js";
 import Contact from "./components/Contact.js";
