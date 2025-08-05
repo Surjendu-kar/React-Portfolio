@@ -8,6 +8,7 @@ import {
   useTheme,
 } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
+import GlareHover from "./ui/GlareHover";
 
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -34,17 +35,14 @@ const ExpCardLink = styled("a")({
   width: "100%",
 });
 
-const ExpCard = styled(Box)(({ theme }) => ({
-  backgroundColor: "rgba(255, 255, 255, 0.025)",
-
+const ExpCard = styled(Box)(() => ({
+  backgroundColor: "#11152c",
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.5)",
   padding: "2rem",
   borderRadius: "10px",
-  transition: "transform 0.3s",
-  "&:hover": {
-    transform: "scale(1.05)",
-    backgroundColor: "#11152c",
-  },
+  // "&:hover": {
+  //   backgroundColor: "#11152c",
+  // },
   "& ul": {
     paddingLeft: "0",
   },
@@ -108,142 +106,183 @@ function Experience() {
           }}
         >
           <AnimatedCard direction="left">
-            <Tooltip
-              title="Click to check the certificate"
-              componentsProps={{
-                tooltip: {
-                  sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
-                },
-              }}
-              arrow
+            <GlareHover
+              width="100%"
+              height="auto"
+              background="rgba(255, 255, 255, 0.025)"
+              borderRadius="10px"
+              borderColor="rgba(255, 255, 255, 0.1)"
+              glareColor="#ffffff"
+              glareOpacity={0.3}
+              glareAngle={-45}
+              glareSize={200}
+              transitionDuration={800}
             >
-              <ExpCardLink
-                href="https://drive.google.com/file/d/19sCTP10SZ6G-z-i_fJM5XXN89y0FPKyO/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Tooltip
+                title="Click to check the certificate"
+                componentsProps={{
+                  tooltip: {
+                    sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
+                  },
+                }}
+                arrow
               >
-                <ExpCard>
-                  <CompanyHeading>
-                    Madrocket Technologies - Full Stack Developer Intern [ Feb
-                    2025 - June 2025 ]
-                  </CompanyHeading>
-                  <ul style={{ marginTop: "10px" }}>
-                    <ExpDescription>
-                      Built modern, responsive school website templates (Learnix
-                      and K-now) focusing on user experience and accessibility.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Developed and enhanced a comprehensive school management
-                      system with automated report card generation, CSV bulk
-                      upload functionality for students/teachers/staff,
-                      integrated test management modules for periodic and
-                      topic-wise assessments, and integrated Quill editor for
-                      customizable school templates.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Enhanced IQnaut website by redesigning the Careers page
-                      with animated sections, improving course cards with
-                      real-time enrollment data and pricing, developed a custom
-                      backend for Razorpay payment integration with automated
-                      email notifications and PDF invoice generation.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Architected and developed a complete Course Management
-                      Platform from scratch with features including
-                      Authentication & User Management, Role-Based Access
-                      Control, Course Management, Interactive Course Details &
-                      Video Modules, Batch Management, Payment Integration with
-                      Razorpay, Assignment Management, and Ranking.
-                    </ExpDescription>
-                  </ul>
-                </ExpCard>
-              </ExpCardLink>
-            </Tooltip>
+                <ExpCardLink
+                  href="https://drive.google.com/file/d/19sCTP10SZ6G-z-i_fJM5XXN89y0FPKyO/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExpCard>
+                    <CompanyHeading>
+                      Madrocket Technologies - Full Stack Developer Intern [ Feb
+                      2025 - June 2025 ]
+                    </CompanyHeading>
+                    <ul style={{ marginTop: "10px" }}>
+                      <ExpDescription>
+                        Built modern, responsive school website templates
+                        (Learnix and K-now) focusing on user experience and
+                        accessibility.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Developed and enhanced a comprehensive school management
+                        system with automated report card generation, CSV bulk
+                        upload functionality for students/teachers/staff,
+                        integrated test management modules for periodic and
+                        topic-wise assessments, and integrated Quill editor for
+                        customizable school templates.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Enhanced IQnaut website by redesigning the Careers page
+                        with animated sections, improving course cards with
+                        real-time enrollment data and pricing, developed a
+                        custom backend for Razorpay payment integration with
+                        automated email notifications and PDF invoice
+                        generation.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Architected and developed a complete Course Management
+                        Platform from scratch with features including
+                        Authentication & User Management, Role-Based Access
+                        Control, Course Management, Interactive Course Details &
+                        Video Modules, Batch Management, Payment Integration
+                        with Razorpay, Assignment Management, and Ranking.
+                      </ExpDescription>
+                    </ul>
+                  </ExpCard>
+                </ExpCardLink>
+              </Tooltip>
+            </GlareHover>
           </AnimatedCard>
 
           <AnimatedCard direction="right">
-            <Tooltip
-              title="Click to check the certificate"
-              componentsProps={{
-                tooltip: {
-                  sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
-                },
-              }}
-              arrow
+            <GlareHover
+              width="100%"
+              height="auto"
+              background="rgba(255, 255, 255, 0.025)"
+              borderRadius="10px"
+              borderColor="rgba(255, 255, 255, 0.1)"
+              glareColor="#ffffff"
+              glareOpacity={0.3}
+              glareAngle={-45}
+              glareSize={200}
+              transitionDuration={800}
             >
-              <ExpCardLink
-                href="https://drive.google.com/file/d/11BOHajHs88B4_KIIjNErqpkaFM2ft74b/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Tooltip
+                title="Click to check the certificate"
+                componentsProps={{
+                  tooltip: {
+                    sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
+                  },
+                }}
+                arrow
               >
-                <ExpCard>
-                  <CompanyHeading>
-                    Weframe Tech - Full Stack Developer Intern [ Dec 2024 - Jan
-                    2025 ]
-                  </CompanyHeading>
-                  <ul style={{ marginTop: "10px" }}>
-                    <ExpDescription>
-                      Developed modern web applications using Next.js, focusing
-                      on server-side rendering and API optimization.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Created dynamic landing pages and web solutions using
-                      Builder.io, Directus CMS, and Medusa.js for e-commerce.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Implemented responsive designs and complex UI components
-                      using Tailwind CSS and Material-UI.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Collaborated with cross-functional teams to deliver
-                      high-quality full-stack solutions.
-                    </ExpDescription>
-                  </ul>
-                </ExpCard>
-              </ExpCardLink>
-            </Tooltip>
+                <ExpCardLink
+                  href="https://drive.google.com/file/d/11BOHajHs88B4_KIIjNErqpkaFM2ft74b/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExpCard>
+                    <CompanyHeading>
+                      Weframe Tech - Full Stack Developer Intern [ Dec 2024 -
+                      Jan 2025 ]
+                    </CompanyHeading>
+                    <ul style={{ marginTop: "10px" }}>
+                      <ExpDescription>
+                        Developed modern web applications using Next.js,
+                        focusing on server-side rendering and API optimization.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Created dynamic landing pages and web solutions using
+                        Builder.io, Directus CMS, and Medusa.js for e-commerce.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Implemented responsive designs and complex UI components
+                        using Tailwind CSS and Material-UI.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Collaborated with cross-functional teams to deliver
+                        high-quality full-stack solutions.
+                      </ExpDescription>
+                    </ul>
+                  </ExpCard>
+                </ExpCardLink>
+              </Tooltip>
+            </GlareHover>
           </AnimatedCard>
 
           <AnimatedCard direction="left">
-            <Tooltip
-              title="Click to check the certificate"
-              componentsProps={{
-                tooltip: {
-                  sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
-                },
-              }}
-              arrow
+            <GlareHover
+              width="100%"
+              height="auto"
+              background="rgba(255, 255, 255, 0.025)"
+              borderRadius="10px"
+              borderColor="rgba(255, 255, 255, 0.1)"
+              glareColor="#ffffff"
+              glareOpacity={0.3}
+              glareAngle={-45}
+              glareSize={200}
+              transitionDuration={800}
             >
-              <ExpCardLink
-                href="https://drive.google.com/file/d/13ikCfjgQOHOZojs12umNO5xwxgkX7vxO/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Tooltip
+                title="Click to check the certificate"
+                componentsProps={{
+                  tooltip: {
+                    sx: isSmallScreen ? tooltipStylesSm : tooltipStyles,
+                  },
+                }}
+                arrow
               >
-                <ExpCard>
-                  <CompanyHeading>
-                    Qubited, Indore - ReactJs Intern [ June 2023 - Sept 2023 ]
-                  </CompanyHeading>
-                  <ul style={{ marginTop: "10px" }}>
-                    <ExpDescription>
-                      Developed and optimized React components using TypeScript
-                      and JavaScript.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Implemented performance enhancement strategies and code
-                      optimization techniques.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Utilized react-router, Material-UI, and Tailwind CSS for
-                      efficient UI development.
-                    </ExpDescription>
-                    <ExpDescription>
-                      Integrated Firebase authentication and real-time database
-                      functionalities.
-                    </ExpDescription>
-                  </ul>
-                </ExpCard>
-              </ExpCardLink>
-            </Tooltip>
+                <ExpCardLink
+                  href="https://drive.google.com/file/d/13ikCfjgQOHOZojs12umNO5xwxgkX7vxO/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExpCard>
+                    <CompanyHeading>
+                      Qubited, Indore - ReactJs Intern [ June 2023 - Sept 2023 ]
+                    </CompanyHeading>
+                    <ul style={{ marginTop: "10px" }}>
+                      <ExpDescription>
+                        Developed and optimized React components using
+                        TypeScript and JavaScript.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Implemented performance enhancement strategies and code
+                        optimization techniques.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Utilized react-router, Material-UI, and Tailwind CSS for
+                        efficient UI development.
+                      </ExpDescription>
+                      <ExpDescription>
+                        Integrated Firebase authentication and real-time
+                        database functionalities.
+                      </ExpDescription>
+                    </ul>
+                  </ExpCard>
+                </ExpCardLink>
+              </Tooltip>
+            </GlareHover>
           </AnimatedCard>
         </Stack>
       </Box>
