@@ -28,7 +28,7 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
   return (
     <CardContainer className="inter-var w-full h-full flex-1">
       <CardBody
-        className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] dark:border-white/[0.1] border-black/[0.1] w-full h-auto sm:min-h-[600px] lg:min-h-[680px] rounded-xl p-3 lg:p-6 border flex flex-col"
+        className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-blue-500/[0.1] dark:border-white/[0.1] border-black/[0.1] w-full h-auto sm:min-h-[600px] lg:min-h-[670px] rounded-xl p-3 lg:p-6 border flex flex-col"
         style={{
           backgroundColor: "rgba(255, 255, 255, 0.025)",
           backdropFilter: "blur(4px)",
@@ -48,7 +48,7 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
             height="1000"
             width="1000"
             className={`${
-              isSmallScreen ? "h-40" : isMediumScreen ? "h-56" : "h-80"
+              isSmallScreen ? "h-40" : isMediumScreen ? "h-56" : "h-72"
             } w-full object-cover rounded-xl group-hover/card:shadow-xl`}
             alt={projectName}
           />
