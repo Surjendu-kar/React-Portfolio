@@ -24,7 +24,7 @@ import Ecommerce from "../assets/E-commerce.png";
 import MotoLog from "../assets/motoLog.png";
 import PizzaJoint from "../assets/PizzaJoint.png";
 import Nexa from "../assets/nexa.png";
-
+import AI_Email_Composer from "../assets/AI-Email-Composer.png";
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
   [theme.breakpoints.down("md")]: { width: "100%" },
@@ -343,11 +343,31 @@ const Projects = () => {
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
+                  projectName="AI Email Composer"
+                  projectTitle="Developed AI Email Composer, a sophisticated email generation platform leveraging Next.js 15, React 19, TypeScript, Tailwind CSS, and Groq AI integration. This intelligent platform transforms simple text prompts into professional emails using LLaMA 3.3 70B model. Features include multi-recipient email delivery to up to 50 recipients, real-time email validation, interactive email editor, comprehensive error handling with toast notifications, and responsive design optimized for all devices."
+                  mainImg={AI_Email_Composer}
+                  link="https://email-generator-wheat.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Email-Generator"
+                  technologies={[
+                    "Next.js 15",
+                    "React 19",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "Groq AI",
+                    "Nodemailer",
+                  ]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+
+            <MainProjectBox>
+              <AnimatedCard direction="right">
+                <ProjectCard3D
                   projectName="E-commerce Product Listing"
                   projectTitle="A modern, fully-featured e-commerce application built with Next.js 14, TypeScript, and Tailwind CSS. It features a responsive design, advanced filtering system, shopping cart functionality with localStorage persistence using Zustand, and real-time search capabilities. The project includes a pixel-perfect home page with product listings and filters, a product detail page with image carousel and reviews, and a comprehensive cart page with quantity controls and price summary."
                   mainImg={Ecommerce}
                   link="https://whatbytes-eight.vercel.app"
-                  repoLink="https://whatbytes-eight.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Whatbytes"
                   technologies={[
                     "Next.js 14",
                     "TypeScript",
@@ -360,7 +380,7 @@ const Projects = () => {
             </MainProjectBox>
 
             <MainProjectBox>
-              <AnimatedCard direction="right">
+              <AnimatedCard direction="left">
                 <ProjectCard3D
                   projectName="TaskAlign-HR"
                   projectTitle="Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."
@@ -378,7 +398,7 @@ const Projects = () => {
             </MainProjectBox>
 
             <MainProjectBox>
-              <AnimatedCard direction="left">
+              <AnimatedCard direction="right">
                 <ProjectCard3D
                   projectName="Ad Banners"
                   projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
@@ -390,7 +410,7 @@ const Projects = () => {
               </AnimatedCard>
             </MainProjectBox>
             <MainProjectBox>
-              <AnimatedCard direction="right">
+              <AnimatedCard direction="left">
                 <ProjectCard3D
                   projectName="TripVibe"
                   projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
@@ -403,7 +423,7 @@ const Projects = () => {
             </MainProjectBox>
 
             <MainProjectBox>
-              <AnimatedCard direction="left">
+              <AnimatedCard direction="right">
                 <ProjectCard3D
                   projectName="NextLevel Food"
                   projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
@@ -416,7 +436,7 @@ const Projects = () => {
             </MainProjectBox>
 
             <MainProjectBox>
-              <AnimatedCard direction="right">
+              <AnimatedCard direction="left">
                 <ProjectCard3D
                   projectName="NextEvents"
                   projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
