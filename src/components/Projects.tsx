@@ -98,13 +98,12 @@ const Projects = () => {
         }}
       >
         <Container sx={{ overflow: "visible" }}>
-          {/* New Replica Projects Section */}
-          <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-            <Heading>Replica Projects</Heading>
+          <Box sx={{ textAlign: "center" }}>
+            <Heading>NextJS Projects</Heading>
             <HrLine />
           </Box>
 
-          <MainProjects sx={{ overflow: "visible" }}>
+          <MainProjects>
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
@@ -123,51 +122,20 @@ const Projects = () => {
                 />
               </AnimatedCard>
             </MainProjectBox>
-
             <MainProjectBox>
               <AnimatedCard direction="right">
                 <ProjectCard3D
-                  projectName="Gemini-Clone"
-                  projectTitle="This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance."
-                  mainImg={Gemini}
-                  link="https://itsmy-gemini-clone.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Gemini-Clone"
-                  technologies={["React", "TypeScript", "Material-UI"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-            <MainProjectBox>
-              <AnimatedCard direction="left">
-                <ProjectCard3D
-                  projectName="Spreadsheet-Prototype"
-                  projectTitle="This project is a static, front-end-only React prototype of a spreadsheet view, designed to visually match a provided Figma design and implement core spreadsheet functionalities. It leverages React 18, TypeScript 5.x, Vite, and Tailwind CSS 3.x for a pixel-perfect user experience. Key features include editable cells, dynamic column types with date pickers and dropdowns, keyboard navigation, column resizing, smooth hover effects, and text truncation. The spreadsheet provides a Google Sheet/Excel-like experience, focusing on a clean and readable layout."
-                  mainImg={SpreadsheetPrototype}
-                  link="https://spreadsheet-prototype.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/spreadsheet-prototype"
-                  technologies={[
-                    "React",
-                    "TypeScript",
-                    "Tailwind CSS",
-                    "@tanstack/react-table",
-                  ]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="right">
-                <ProjectCard3D
-                  projectName="MotoLog Landing Page"
-                  projectTitle="A modern and interactive landing page built with Next.js 15, React 19, and Tailwind CSS 4. This project features dynamic animations using Framer Motion, integrated forms with React Hook Form and Yup for validation, and a sleek UI utilizing Lucide React for icons and Radix UI components. It's designed to provide a engaging user experience, likely for a motorcycle-related application or service."
-                  mainImg={MotoLog}
-                  link="https://webbywolf-cyan.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/webbywolf"
+                  projectName="AI Email Composer"
+                  projectTitle="Developed AI Email Composer, a sophisticated email generation platform leveraging Next.js 15,  TypeScript, Tailwind CSS, and Groq AI integration. This intelligent platform transforms simple text prompts into professional emails using LLaMA 3.3 70B model. Features include multi-recipient email delivery to up to 50 recipients, real-time email validation, interactive email editor, comprehensive error handling with toast notifications, and responsive design optimized for all devices."
+                  mainImg={AI_Email_Composer}
+                  link="https://email-generator-wheat.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Email-Generator"
                   technologies={[
                     "Next.js 15",
-                    "React 19",
-                    "Tailwind CSS 4",
-                    "Framer Motion",
                     "TypeScript",
+                    "Tailwind CSS",
+                    "Groq AI",
+                    "Nodemailer",
                   ]}
                 />
               </AnimatedCard>
@@ -176,25 +144,68 @@ const Projects = () => {
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
-                  projectName="Pizza Joint"
-                  projectTitle="A front-end pizza ordering application built with React and Vite, serving as a practice project for learning and implementing Framer Motion. The project utilizes React Router DOM for navigation and is styled with Tailwind CSS, showcasing a clean and responsive user interface for creating custom pizzas."
-                  mainImg={PizzaJoint}
-                  link="https://pizza-joint-fm.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Pizza-Joint-fm"
+                  projectName="E-commerce Product Listing"
+                  projectTitle="A modern, fully-featured e-commerce application built with Next.js 14, TypeScript, and Tailwind CSS. It features a responsive design, advanced filtering system, shopping cart functionality with localStorage persistence using Zustand, and real-time search capabilities. The project includes a pixel-perfect home page with product listings and filters, a product detail page with image carousel and reviews, and a comprehensive cart page with quantity controls and price summary."
+                  mainImg={Ecommerce}
+                  link="https://whatbytes-eight.vercel.app"
+                  repoLink="https://github.com/Surjendu-kar/Whatbytes"
                   technologies={[
-                    "React",
-                    "Framer Motion",
-                    "React Router DOM",
-                    "Tailwind CSS",
+                    "Next.js 14",
                     "TypeScript",
+                    "Tailwind CSS",
+                    "Zustand",
+                    "Lucide React",
                   ]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+
+            <MainProjectBox>
+              <AnimatedCard direction="right">
+                <ProjectCard3D
+                  projectName="TaskAlign-HR"
+                  projectTitle="Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."
+                  mainImg={HrManagementImg}
+                  link="https://taskalign-hr.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/TaskAlign-HR"
+                  technologies={[
+                    "NextJS",
+                    "Material-UI",
+                    "TypeScript",
+                    "MongoDB",
+                  ]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+
+            <MainProjectBox>
+              <AnimatedCard direction="left">
+                <ProjectCard3D
+                  projectName="Ad Banners"
+                  projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
+                  mainImg={AdBanner}
+                  link="https://ad-banners.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Ad-Banners"
+                  technologies={["NextJS", "TypeScript", "Material-UI"]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+            <MainProjectBox>
+              <AnimatedCard direction="right">
+                <ProjectCard3D
+                  projectName="TripVibe"
+                  projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
+                  mainImg={TripVive}
+                  link="https://trip-vibe.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/TripVibe"
+                  technologies={["NextJS", "MongoDB"]}
                 />
               </AnimatedCard>
             </MainProjectBox>
           </MainProjects>
 
           {/* react projects */}
-          <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
+          <Box sx={{ textAlign: "center", margin: "7rem 0 3rem" }}>
             <Heading>React Projects</Heading>
             <HrLine />
           </Box>
@@ -272,32 +283,6 @@ const Projects = () => {
             <MainProjectBox>
               <AnimatedCard direction="right">
                 <ProjectCard3D
-                  projectName="CryptoFlip"
-                  projectTitle="This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript for strong typing. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. Additionally, we provide a simulated 10 ETH free balance for testing and interaction purposes. The project is currently in the development phase."
-                  mainImg={CryptoFlipImg}
-                  link="https://crypto-flip.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/CryptoFlip"
-                  technologies={["React", "TypeScript", "Material-UI"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="left">
-                <ProjectCard3D
-                  projectName="Telegram-Clone"
-                  projectTitle="Developed a pixel-perfect replica of the Telegram messaging app using ReactJS and Material-UI in a 48-hour assessment for a job application. Implemented responsive design for desktop and mobile views. Integrated two provided APIs: a paginated API to fetch and display a list of chats, and a message API to retrieve and show messages for a given chat id. Implemented dark and light mode functionality to enhance user experience. This project demonstrated my skills in ReactJS, Material-UI, API integration, and ability to deliver under pressure."
-                  mainImg={Telegram}
-                  link="https://its-my-telegram-clone.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Telegram-Clone"
-                  technologies={["React", "Material-UI", "API Integration"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="right">
-                <ProjectCard3D
                   projectName="SkySight"
                   projectTitle="A comprehensive React application enabling users to securely log in, fetch real-time weather for their location, access 3-6 day forecasts, view detailed humidity and temperature graphs, seamlessly switch between favorite locations, and explore conditions via an interactive map."
                   mainImg={SkySight_Img}
@@ -311,12 +296,12 @@ const Projects = () => {
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
-                  projectName="Book-AI-replica"
-                  projectTitle="This project replicates the 'Pricing' section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI."
-                  mainImg={BookAi}
-                  link="https://book-ai-replica.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Book-AI-replica"
-                  technologies={["React", "MUI"]}
+                  projectName="CryptoFlip"
+                  projectTitle="This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript for strong typing. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance. Additionally, we provide a simulated 10 ETH free balance for testing and interaction purposes. The project is currently in the development phase."
+                  mainImg={CryptoFlipImg}
+                  link="https://crypto-flip.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/CryptoFlip"
+                  technologies={["React", "TypeScript", "Material-UI"]}
                 />
               </AnimatedCard>
             </MainProjectBox>
@@ -334,27 +319,56 @@ const Projects = () => {
             </MainProjectBox>
           </MainProjects>
 
-          <Box sx={{ textAlign: "center", margin: "3rem 0 1rem" }}>
-            <Heading>NextJS Projects</Heading>
+          {/* New Replica Projects Section */}
+          <Box sx={{ textAlign: "center", margin: "7rem 0 3rem" }}>
+            <Heading>Replica Projects</Heading>
             <HrLine />
           </Box>
 
-          <MainProjects>
+          <MainProjects sx={{ overflow: "visible" }}>
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
-                  projectName="AI Email Composer"
-                  projectTitle="Developed AI Email Composer, a sophisticated email generation platform leveraging Next.js 15, React 19, TypeScript, Tailwind CSS, and Groq AI integration. This intelligent platform transforms simple text prompts into professional emails using LLaMA 3.3 70B model. Features include multi-recipient email delivery to up to 50 recipients, real-time email validation, interactive email editor, comprehensive error handling with toast notifications, and responsive design optimized for all devices."
-                  mainImg={AI_Email_Composer}
-                  link="https://email-generator-wheat.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Email-Generator"
+                  projectName="Gemini-Clone"
+                  projectTitle="This project is a dynamic and responsive replica of the Gemini platform, designed to offer a seamless user experience akin to the original site. It utilizes ReactJs for efficient UI rendering, Material-UI (MUI) for a robust and flexible design system, and TypeScript. It also includes a toggle feature allowing users to switch between light and dark themes, enhancing accessibility and user preference compliance."
+                  mainImg={Gemini}
+                  link="https://itsmy-gemini-clone.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Gemini-Clone"
+                  technologies={["React", "TypeScript", "Material-UI"]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+            <MainProjectBox>
+              <AnimatedCard direction="right">
+                <ProjectCard3D
+                  projectName="Spreadsheet-Prototype"
+                  projectTitle="This project is a static, front-end-only React prototype of a spreadsheet view, designed to visually match a provided Figma design and implement core spreadsheet functionalities. It leverages React 18, TypeScript 5.x, Vite, and Tailwind CSS 3.x for a pixel-perfect user experience. Key features include editable cells, dynamic column types with date pickers and dropdowns, keyboard navigation, column resizing, smooth hover effects, and text truncation. The spreadsheet provides a Google Sheet/Excel-like experience, focusing on a clean and readable layout."
+                  mainImg={SpreadsheetPrototype}
+                  link="https://spreadsheet-prototype.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/spreadsheet-prototype"
+                  technologies={[
+                    "React",
+                    "TypeScript",
+                    "Tailwind CSS",
+                    "@tanstack/react-table",
+                  ]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
+
+            <MainProjectBox>
+              <AnimatedCard direction="left">
+                <ProjectCard3D
+                  projectName="MotoLog Landing Page"
+                  projectTitle="A modern and interactive landing page built with Next.js 15 and Tailwind CSS 4. This project features dynamic animations using Framer Motion, integrated forms with React Hook Form and Yup for validation, and a sleek UI utilizing Lucide React for icons and Radix UI components. It's designed to provide a engaging user experience, likely for a motorcycle-related application or service."
+                  mainImg={MotoLog}
+                  link="https://webbywolf-cyan.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/webbywolf"
                   technologies={[
                     "Next.js 15",
-                    "React 19",
+                    "Tailwind CSS 4",
+                    "Framer Motion",
                     "TypeScript",
-                    "Tailwind CSS",
-                    "Groq AI",
-                    "Nodemailer",
                   ]}
                 />
               </AnimatedCard>
@@ -363,87 +377,31 @@ const Projects = () => {
             <MainProjectBox>
               <AnimatedCard direction="right">
                 <ProjectCard3D
-                  projectName="E-commerce Product Listing"
-                  projectTitle="A modern, fully-featured e-commerce application built with Next.js 14, TypeScript, and Tailwind CSS. It features a responsive design, advanced filtering system, shopping cart functionality with localStorage persistence using Zustand, and real-time search capabilities. The project includes a pixel-perfect home page with product listings and filters, a product detail page with image carousel and reviews, and a comprehensive cart page with quantity controls and price summary."
-                  mainImg={Ecommerce}
-                  link="https://whatbytes-eight.vercel.app"
-                  repoLink="https://github.com/Surjendu-kar/Whatbytes"
+                  projectName="Pizza Joint"
+                  projectTitle="A front-end pizza ordering application built with React and Vite, serving as a practice project for learning and implementing Framer Motion. The project utilizes React Router DOM for navigation and is styled with Tailwind CSS, showcasing a clean and responsive user interface for creating custom pizzas."
+                  mainImg={PizzaJoint}
+                  link="https://pizza-joint-fm.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Pizza-Joint-fm"
                   technologies={[
-                    "Next.js 14",
-                    "TypeScript",
+                    "React",
+                    "Framer Motion",
+                    "React Router DOM",
                     "Tailwind CSS",
-                    "Zustand",
-                    "Lucide React",
-                  ]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="left">
-                <ProjectCard3D
-                  projectName="TaskAlign-HR"
-                  projectTitle="Developed a comprehensive HR management system using Next.js, TypeScript, Material-UI, and MongoDB. The application enables HR professionals to efficiently manage tasks, streamlining workflow and improving organizational productivity. Currently in the development phase."
-                  mainImg={HrManagementImg}
-                  link="https://taskalign-hr.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/TaskAlign-HR"
-                  technologies={[
-                    "NextJS",
-                    "Material-UI",
                     "TypeScript",
-                    "MongoDB",
                   ]}
                 />
               </AnimatedCard>
             </MainProjectBox>
 
             <MainProjectBox>
-              <AnimatedCard direction="right">
-                <ProjectCard3D
-                  projectName="Ad Banners"
-                  projectTitle="A dynamic Next.js application with TypeScript and MUI, designed for a job assignment to manage and display advertisement banners. It features an interactive UI that allows users to edit and save banner details like title, description, and images, including the option to download edited images. The system supports image uploads and offers persistence with local storage."
-                  mainImg={AdBanner}
-                  link="https://ad-banners.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/Ad-Banners"
-                  technologies={["NextJS", "TypeScript", "Material-UI"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-            <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D
-                  projectName="TripVibe"
-                  projectTitle="Seamless travel planning and community experience powered by NextJS. In TripVibe, users can meticulously plan their trips by adding destinations along with specific dates and times. Each entry allows the addition of personal notes for activities planned at those times. The platform is designed to alert users with a popup message if there are any overlapping events, ensuring a smooth scheduling experience."
-                  mainImg={TripVive}
-                  link="https://trip-vibe.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/TripVibe"
-                  technologies={["NextJS", "MongoDB"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="right">
-                <ProjectCard3D
-                  projectName="NextLevel Food"
-                  projectTitle="Exploring modern culinary trends and delivering a delightful user experience with NextJS."
-                  mainImg={NextLevelFood}
-                  link="https://foodies-food.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/NextLevel-Food"
-                  technologies={["NextJS", "Tailwind Css"]}
-                />
-              </AnimatedCard>
-            </MainProjectBox>
-
-            <MainProjectBox>
-              <AnimatedCard direction="left">
-                <ProjectCard3D
-                  projectName="NextEvents"
-                  projectTitle="Engage and discover local events with a dynamic, interactive platform using NextJS."
-                  mainImg={NextEvent}
-                  link="https://show-events.vercel.app/"
-                  repoLink="https://github.com/Surjendu-kar/NextEvents"
-                  technologies={["NextJS"]}
+                  projectName="Book-AI-replica"
+                  projectTitle="This project replicates the 'Pricing' section of the TryBookAI.com website as part of a job assessment for a frontend development position. The focus of this replication was to create a component that is responsive, accessible, and maintains design fidelity with the original site. It has been developed using ReactJS, TypeScript, and Material-UI."
+                  mainImg={BookAi}
+                  link="https://book-ai-replica.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/Book-AI-replica"
+                  technologies={["React", "MUI"]}
                 />
               </AnimatedCard>
             </MainProjectBox>
