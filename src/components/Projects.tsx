@@ -98,7 +98,7 @@ const Projects = () => {
         }}
       >
         <Container sx={{ overflow: "visible" }}>
-          <Box sx={{ textAlign: "center" }}>
+          <Box sx={{ textAlign: "center", margin:"3rem 0" }}>
             <Heading>NextJS Projects</Heading>
             <HrLine />
           </Box>
