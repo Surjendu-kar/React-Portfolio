@@ -35,8 +35,8 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-      // Only apply scroll-based background changes on desktop (md and above)
-      if (!isMobile && window.pageYOffset > 50) {
+      // Apply scroll-based background changes on both desktop and mobile
+      if (window.pageYOffset > 50) {
         setNavBarClass("navbar-reduce");
       } else {
         setNavBarClass("navbar-trans");

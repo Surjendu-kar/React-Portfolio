@@ -659,13 +659,34 @@ a:hover {
 
 .navbar-b.navbar-reduce {
   transition: all 0.5s ease-in-out;
+  /* Original white blurry background */
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* Enhanced backdrop-filter with vendor prefixes for better browser support */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  -moz-backdrop-filter: blur(20px) saturate(180%);
+  -ms-backdrop-filter: blur(20px) saturate(180%);
   padding-top: 15px;
   padding-bottom: 15px;
   z-index: 9999;
   position: relative;
+  /* Additional properties for better blur support */
+  will-change: backdrop-filter;
+  transform: translateZ(0);
+}
+
+/* Enhanced support for browsers that support backdrop-filter */
+@supports (backdrop-filter: blur(20px)) {
+  .navbar-b.navbar-reduce {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+/* Webkit specific support */
+@supports (-webkit-backdrop-filter: blur(20px)) {
+  .navbar-b.navbar-reduce {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 .navbar-b.navbar-reduce .nav-link {
@@ -1322,4 +1343,43 @@ footer .copyright {
 
 .navbar-b .nav-item {
   display: block !important;
+}
+/* Additional navbar blur fixes for production environments */
+.navbar-b {
+  /* Ensure proper stacking context */
+  isolation: isolate;
+}
+
+.navbar-b.navbar-reduce {
+  /* Force hardware acceleration */
+  transform: translate3d(0, 0, 0);
+  /* Ensure proper layering */
+  contain: layout style paint;
+  /* Better blur rendering */
+  filter: none; /* Reset any inherited filters */
+}
+
+/* Fallback for older browsers or when backdrop-filter fails */
+.navbar-b.navbar-reduce::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: -1;
+  /* Only show this fallback if backdrop-filter is not supported */
+  display: none;
+}
+
+/* Show fallback background if backdrop-filter is not supported */
+@supports not (backdrop-filter: blur(20px)) and not
+  (-webkit-backdrop-filter: blur(20px)) {
+  .navbar-b.navbar-reduce::before {
+    display: block;
+  }
+  .navbar-b.navbar-reduce {
+    background-color: transparent;
+  }
 }
