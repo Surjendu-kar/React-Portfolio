@@ -128,7 +128,7 @@ function Experience() {
                 arrow
               >
                 <ExpCardLink
-                  href="https://drive.google.com/file/d/19sCTP10SZ6G-z-i_fJM5XXN89y0FPKyO/"
+                  href="https://drive.google.com/file/d/1734-8RphYVjnlB9F9szCv69GUAqQAKeo/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -197,7 +197,7 @@ function Experience() {
                 arrow
               >
                 <ExpCardLink
-                  href="https://drive.google.com/file/d/11BOHajHs88B4_KIIjNErqpkaFM2ft74b/"
+                  href="https://drive.google.com/file/d/1pIumpNmuUcuDY-KZjqmFXdWgaXRB_LpT/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -253,7 +253,7 @@ function Experience() {
                 arrow
               >
                 <ExpCardLink
-                  href="https://drive.google.com/file/d/13ikCfjgQOHOZojs12umNO5xwxgkX7vxO/"
+                  href="https://drive.google.com/file/d/1n5ciEVXbw7bjyYTU4Ojq9T7SaLZOg1st/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
