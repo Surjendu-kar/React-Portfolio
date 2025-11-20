@@ -3,14 +3,11 @@ import HealthHarbor_Img from "../assets/health.png";
 import SkySight_Img from "../assets/skySIght-img.jpg";
 import MovieMagnet_Img from "../assets/MovieMagnet.png";
 import Tenzies_Img from "../assets/Tenzies_Img.png";
-import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import ProjectCard3D from "./ProjectCard3D";
 import { styled } from "@mui/system";
 import Gemini from "../assets/gemini.png";
-import NextLevelFood from "../assets/nextLevelFood.png";
-import Telegram from "../assets/telegram.png";
 import TripVive from "../assets/TripVibe.png";
-import NextEvent from "../assets/NextEvent.png";
 import AdBanner from "../assets/AdBanner.png";
 import BookAi from "../assets/BookAi.png";
 import AnimatedCard from "./AnimatedCard";
@@ -24,7 +21,9 @@ import Ecommerce from "../assets/E-commerce.png";
 import MotoLog from "../assets/motoLog.png";
 import PizzaJoint from "../assets/PizzaJoint.png";
 import Nexa from "../assets/nexa.png";
+import EduExamPortal from "../assets/EduExamportal.webp";
 import AI_Email_Composer from "../assets/AI-Email-Composer.png";
+
 const Container = styled(Box)(({ theme }) => ({
   width: "90%",
   [theme.breakpoints.down("md")]: { width: "100%" },
@@ -98,12 +97,38 @@ const Projects = () => {
         }}
       >
         <Container sx={{ overflow: "visible" }}>
-          <Box sx={{ textAlign: "center", margin:"3rem 0" }}>
+          <Box sx={{ textAlign: "center", margin: "3rem 0" }}>
             <Heading>NextJS Projects</Heading>
             <HrLine />
           </Box>
 
           <MainProjects>
+            <MainProjectBox>
+              <AnimatedCard direction="left">
+                <ProjectCard3D
+                  projectName="EduExamPortal"
+                  projectTitle="A full-stack examination system built with Next.js 15, TypeScript, and Supabase, enabling
+  educational institutions to create, assign, and grade exams digitally. Features role-based access       
+  control (Admin, Teacher, Student), multi-question type support (MCQ, SAQ, Coding), and real-time        
+  code execution via Judge0 API for 8+ programming languages. Implements institution-based
+  multi-tenant architecture with Row Level Security policies, question cloning system for individual
+  student tracking, and automated grading workflows for MCQ questions. Built with shadcn/ui
+  components, Tailwind CSS, Monaco Editor integration for in-browser coding, and secure token-based
+  invitation systems with exam session management and auto-save functionality."
+                  mainImg={EduExamPortal}
+                  link="https://edu-exam-portal.vercel.app/"
+                  repoLink="https://github.com/Surjendu-kar/EduExamPortal"
+                  technologies={[
+                    "Next.js 15",
+                    "TypeScript",
+                    "Supabase",
+                    "shadcn/ui",
+                    "Tailwind CSS",
+                    "Monaco Editor",
+                  ]}
+                />
+              </AnimatedCard>
+            </MainProjectBox>
             <MainProjectBox>
               <AnimatedCard direction="left">
                 <ProjectCard3D

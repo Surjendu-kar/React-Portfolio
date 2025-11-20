@@ -49,7 +49,7 @@ const ProjectCard3D: React.FC<ProjectCard3DProps> = ({
             width="1000"
             className={`${
               isSmallScreen ? "h-40" : isMediumScreen ? "h-56" : "h-72"
-            } w-full object-cover rounded-xl group-hover/card:shadow-xl`}
+            } w-full object-cover rounded-md md:rounded-xl group-hover/card:shadow-xl`}
             alt={projectName}
           />
         </CardItem>
