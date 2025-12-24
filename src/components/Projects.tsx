@@ -107,21 +107,17 @@ const Projects = () => {
               <AnimatedCard direction="left">
                 <ProjectCard3D
                   projectName="EduExamPortal"
-                  projectTitle="A full-stack examination system built with Next.js 15, TypeScript, and Supabase, enabling
-  educational institutions to create, assign, and grade exams digitally. Features role-based access       
-  control (Admin, Teacher, Student), multi-question type support (MCQ, SAQ, Coding), and real-time        
-  code execution via Judge0 API for 8+ programming languages. Implements institution-based
-  multi-tenant architecture with Row Level Security policies, question cloning system for individual
-  student tracking, and automated grading workflows for MCQ questions. Built with shadcn/ui
-  components, Tailwind CSS, Monaco Editor integration for in-browser coding, and secure token-based
-  invitation systems with exam session management and auto-save functionality."
+                  projectTitle="A comprehensive online examination platform for educational institutions with multi-tenant architecture and role-based access control (Admin, Teacher, Student). Features three question types (MCQ, SAQ, Coding) with support for 8 programming languages via Judge0 API integration. Implements Monaco Editor for in-browser coding with syntax highlighting, test case validation, and auto-grading. Includes advanced features like email template system with rich text editor, token-based invitation system for teachers and students, question cloning for individual tracking, hybrid grading system (auto and manual), analytics dashboard with user growth charts, and Row Level Security policies for data isolation. Built with Next.js 15, TypeScript, Supabase, shadcn/ui, and Tailwind CSS."
                   mainImg={EduExamPortal}
                   link="https://edu-exam-portal.vercel.app/"
                   repoLink="https://github.com/Surjendu-kar/EduExamPortal"
                   technologies={[
                     "Next.js 15",
+                    "React 19",
                     "TypeScript",
                     "Supabase",
+                    "Judge0",
+                    "Zod",
                     "shadcn/ui",
                     "Tailwind CSS",
                     "Monaco Editor",

@@ -1,10 +1,7 @@
-import myImage from "../assets/mynewImg.png";
 import Skills from "./Skills";
 import { Box, styled, Typography, useTheme } from "@mui/material";
 import AnimatedCard from "./AnimatedCard";
-import BlurCard from "./BlurCard";
 import Experience from "./Experience";
-import { motion } from "framer-motion";
 
 const Heading = styled(Typography)(({ theme }) => ({
   fontSize: "2.7rem",
@@ -37,17 +34,14 @@ const AboutContent = styled(Typography)(() => ({
 const about_me: { id: string; content: string; highlight?: string }[] = [
   {
     id: "first-p-about",
-    content: `Full-Stack Developer with 8+ months of hands-on professional experience building comprehensive web applications. 
-Key achievements include publishing a custom npm package (ByteUI-Core), completing multiple successful internships across diverse tech companies, 
-and delivering end-to-end full-stack solutions including school management systems and course platforms. Proven track record of delivering 
-scalable web solutions with technical innovation and cross-platform expertise.`,
+    content: `Full-Stack Developer with `,
+    highlight: "1+ year of hands-on industry experience",
+  },
+  {
+    id: "second-p-about",
+    content: ` building comprehensive web applications. Key achievements include publishing a custom npm package (ByteUI-Core), completing multiple successful internships across diverse tech companies, and delivering end-to-end full-stack solutions including school management systems and course platforms. Proven track record of delivering scalable web solutions with technical innovation and cross-platform expertise. `,
     highlight: "Currently learning Framer Motion.",
   },
-  // {
-  //   id: "second-p-about",
-  //   highlight:
-  //     "Currently working as a Full Stack Developer at Weframe Tech, where I specialize in building modern web applications using Next.js and related technologies.",
-  // },
 ];
 const About = () => {
   const theme = useTheme();
@@ -97,7 +91,7 @@ const About = () => {
             <HrLine />
 
             {about_me.map((content) => (
-              <Box key={content.id}>
+              <Box key={content.id} sx={{ display: "inline" }}>
                 <Typography
                   component="span"
                   sx={{
