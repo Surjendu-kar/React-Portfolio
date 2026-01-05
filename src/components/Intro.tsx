@@ -162,7 +162,8 @@ const Intro = () => {
                 <ButtonStyle
                   variant="contained"
                   // href="https://drive.google.com/file/d/1PeMsbmywbKbdgmQAY_SnCR0ZGUROCPvJ/"
-                  href="https://drive.google.com/file/d/1iEGZ9QlcCNyjryKRz2xzBiOhcGg7JR77/"
+                  // href="https://drive.google.com/file/d/1iEGZ9QlcCNyjryKRz2xzBiOhcGg7JR77/"
+                  href="https://drive.google.com/file/d/1TCkZAwgI7Q_-lDBdo2dN5nQaYbd08OTy/"
                   {...{ target: "_blank", rel: "noopener noreferrer" }}
                 >
                   View My Resume
@@ -181,7 +182,7 @@ const Intro = () => {
                     <GitHubIcon />
                   </IconButton>
                   <IconButton
-                    href="mailto:rahulkar9988@gmail.com"
+                    href="mailto:surjendu.work@gmail.com"
                     {...{ target: "_blank", rel: "noopener noreferrer" }}
                   >
                     <EmailIcon />
